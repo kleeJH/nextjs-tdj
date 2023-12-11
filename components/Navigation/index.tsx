@@ -1,0 +1,29 @@
+import Link from "next/link";
+import Image from "next/image";
+import DesktopNavigation from "./desktop-nav";
+import Config from "@config";
+
+const Navigation = () => {
+  return (
+    <nav className="z-50 w-full bg-main flex items-center py-4 top-0">
+      <div className="container h-fit justify-between inline-flex align-middle">
+        <Link href={"/"} className="relative flex items-center gap-4">
+          <Image
+            src={Config.logo}
+            alt="TDJ Logo"
+            width={32}
+            height={32}
+            className="object-contain"
+          />
+          <p className="max-sm:hidden font-bold cursor-pointer text-lg tracking-wide pink-text-gradient">
+            Tadika Desa Jaya
+          </p>
+        </Link>
+
+        <DesktopNavigation />
+      </div>
+    </nav>
+  );
+};
+
+export default Navigation;
