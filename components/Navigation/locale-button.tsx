@@ -4,7 +4,6 @@ import Config from "@config";
 
 import { useLocale, useTranslations } from "next-intl";
 import { useState, useEffect, useRef } from "react";
-import { ChangeEvent, ReactNode, useTransition } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
@@ -51,7 +50,7 @@ const LocaleSwitch = () => {
     <>
       <motion.div
         whileTap={{ scale: 0.8 }}
-        className="rounded-lg p-2 duration-300 focus:outline-none focus-visible:ring-2 bg-secondary hover:bg-accent cursor-pointer border-solid border-[1px] border-accent"
+        className="square-button focus:outline-none focus-visible:ring-2 shadow shadow-accent"
         onClick={() => setToggleLocaleDropdown(!toggleLocaleDropdown)}
         ref={localeDropdownRef}
       >
@@ -69,12 +68,13 @@ const LocaleSwitch = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="bg-secondary absolute top-16 w-fit -translate-x-[31%] border-solid border-[1px] border-accent rounded-lg p-2 overflow-hidden focus:outline-none focus-visible:ring-2 flex-row"
+            className="bg-main absolute top-16 w-fit -translate-x-[31%] border-solid border-[1px] border-accent rounded-lg p-2 overflow-hidden focus:outline-none focus-visible:ring-2"
           >
+            <div className="flex flex-col gap-1">
             {Object.keys(Config.locales).map((locale) => (
               <div
                 key={locale}
-                className="h-10 flex items-center rounded-lg p-2 hover:bg-accent transition duration-500 cursor-pointer font-semibold"
+                className="h-10 flex items-center rounded-lg p-2 hover:bg-secondary transition duration-500 cursor-pointer font-semibold"
                 onClick={() => handleDropdownItemClick(locale)}
               >
                 <Image
@@ -87,6 +87,7 @@ const LocaleSwitch = () => {
                 {`${t(locale)}`}
               </div>
             ))}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

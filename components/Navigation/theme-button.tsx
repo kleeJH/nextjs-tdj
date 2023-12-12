@@ -19,7 +19,7 @@ const ThemeSwitch = () => {
       {mounted ? (
         <motion.button
           whileTap={{ scale: 0.8 }}
-          className="rounded-lg p-2 duration-300 focus:outline-none focus-visible:ring-2 bg-secondary hover:bg-accent border-solid border-[1px] border-accent"
+          className="square-button shadow shadow-accent"
           onClick={() => {
             setTheme(resolvedTheme === "dark" ? "light" : "dark");
           }}

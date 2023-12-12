@@ -1,10 +1,18 @@
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { Hero } from "@components/MainPage";
+import { notFound } from "next/navigation";
+import Config from "@config";
 
 const RootPage = () => {
-  const t = useTranslations("Index");
-  return <div className=" text-default mt-10">
-    {t("title")}
-  </div>;
+  // if (!Object.keys(Config.locales).includes(useLocale() as any)) return notFound();
+
+  // const t = useTranslations("Index");
+  return (
+    <div className=" text-default mt-10 mb-[1000px]">
+      {/* {t("title")} */}
+      <Hero />
+    </div>
+  );
 };
 
 export default RootPage;

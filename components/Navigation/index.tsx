@@ -1,7 +1,9 @@
+import Config from "@config";
+
 import Link from "next/link";
 import Image from "next/image";
 import DesktopNavigation from "./desktop-nav";
-import Config from "@config";
+import MobileNavigation from "./mobile-nav";
 
 const Navigation = () => {
   return (
@@ -18,9 +20,13 @@ const Navigation = () => {
           <p className="max-sm:hidden font-bold cursor-pointer text-lg tracking-wide pink-text-gradient">
             Tadika Desa Jaya
           </p>
+          <p className="sm:hidden font-bold cursor-pointer text-lg tracking-wide pink-text-gradient">
+            TDJ
+          </p>
         </Link>
 
         <DesktopNavigation />
+        <MobileNavigation />
       </div>
     </nav>
   );

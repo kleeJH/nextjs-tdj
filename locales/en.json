@@ -3,7 +3,31 @@
     "en": "English",
     "zh": "Chinese"
   },
+
   "Index": {
     "title": "Hello world!"
+  },
+
+  "Footer": {
+    "Top": {
+      "Motto": "Nurturing Curiosity, Cultivating Confidence, Inspiring Lifelong Learners.",
+      "Category": {
+        "quickLinks": "Quick Links",
+        "connect": "Connect"
+      },
+      "SubCategory": {
+        "aboutUs": "About Us",
+        "ourProgrammes": "Our Programmes",
+        "contactUs": "Contact Us",
+        "career": "Career"
+      }
+    },
+    "Bottom": {
+      "madeWith": "Made with love ❤️.",
+      "socialMedia": "Social Media",
+      "termsOfService": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "allRightsReserved": "All rights reserved"
+    }
   }
 }

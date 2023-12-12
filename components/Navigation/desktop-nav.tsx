@@ -1,6 +1,5 @@
 import LocaleSwitch from "./locale-button";
 import ThemeSwitch from "./theme-button";
-import pick from "lodash/pick";
 
 const DesktopNavigation = () => {
   return (

@@ -231,3 +231,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* Square Buttons */
+.square-button {
+  @apply rounded-lg p-2 duration-300 bg-secondary hover:bg-accent border-solid border-[1px] border-accent select-none;
+}

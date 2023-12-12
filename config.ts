@@ -10,6 +10,12 @@ const Config: {
   locales: { [langs: string]: { icon: string | StaticImport } };
   defaultLocale: string;
   logo: StaticImageData;
+  socials: { [category: string]: { href: string } };
+  footer: {
+    [categoryTranslationPath: string]: {
+      [subCategoryTranslationPath: string]: { href: string };
+    };
+  };
 } = {
   locales: {
     en: {
@@ -21,6 +27,29 @@ const Config: {
   },
   defaultLocale: "en",
   logo: Logo,
+  socials: {
+    facebook: {
+      href: "https://www.facebook.com/TJDEDU",
+    },
+  },
+  footer: {
+    "Footer.Top.Category.quickLinks": {
+      "Footer.Top.SubCategory.aboutUs": {
+        href: "/",
+      },
+      "Footer.Top.SubCategory.ourProgrammes": {
+        href: "/",
+      },
+    },
+    "Footer.Top.Category.connect": {
+      "Footer.Top.SubCategory.contactUs": {
+        href: "/",
+      },
+      "Footer.Top.SubCategory.career": {
+        href: "/",
+      },
+    },
+  },
 };
 
 export default Config;
