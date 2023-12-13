@@ -5,9 +5,9 @@ import Image from "next/image";
 import DesktopNavigation from "./desktop-nav";
 import MobileNavigation from "./mobile-nav";
 
-const Navigation = () => {
+const Navigation = ({type = "default"} : {type?: "default" | "transparent"}) => {
   return (
-    <nav className="z-50 w-full bg-main flex items-center py-4 top-0">
+    <nav className={`${type === "default" ? "bg-main" : ""} z-50 w-full flex items-center py-4 top-0`}>
       <div className="container h-fit justify-between inline-flex align-middle">
         <Link href={"/"} className="relative flex items-center gap-4">
           <Image

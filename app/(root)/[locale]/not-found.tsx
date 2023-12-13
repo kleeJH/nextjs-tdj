@@ -1,9 +1,13 @@
-import React from 'react'
+import NotFound from "@components/NotFound";
+import Navigation from "@components/Navigation";
 
-const NotFound = () => {
+const NotFoundPage = () => {
   return (
-    <div>NotFound</div>
-  )
-}
+    <>
+      <Navigation type="transparent" />
+      <NotFound type="notfound" />
+    </>
+  );
+};
 
-export default NotFound
+export default NotFoundPage;

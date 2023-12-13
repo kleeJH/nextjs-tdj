@@ -9,7 +9,7 @@ import Config from "@config";
 
 import "./Footer.css";
 
-const FooterTemp = () => {
+const Footer = () => {
   const t = useTranslations()
   return (
     <footer className="w-full absolute bottom-0 bg-main p-6">
@@ -111,4 +111,4 @@ const FooterTemp = () => {
   );
 };
 
-export default FooterTemp;
+export default Footer;

@@ -42,8 +42,8 @@ const LocaleSwitch = () => {
 
     // Else, set next locale and change route path
     setNextLocale(newLocale);
-    const regex = new RegExp(`/(${Object.keys(Config.locales).join("|")})/*`);
-    router.replace(newLocale + "/" + pathname.replace(regex, "/"));
+    const regex = new RegExp(`(/(${Object.keys(Config.locales).join("|")}))+/?`, "g" );
+    router.replace(`/${newLocale}/${pathname.replaceAll(regex, "")}`)
   };
 
   return (
