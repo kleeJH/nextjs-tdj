@@ -12,7 +12,7 @@ import "./Footer.css";
 const Footer = () => {
   const t = useTranslations()
   return (
-    <footer className="w-full absolute bottom-0 bg-main p-6">
+    <footer className="w-full bottom-0 bg-main py-6">
       <div className="container">
         <div className="flex flex-col">
           <div className="flex flex-row justify-between items-center gap-8 max-sm:flex-col max-sm:items-start max-sm:justfiy-start">

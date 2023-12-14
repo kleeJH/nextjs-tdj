@@ -1,14 +1,23 @@
-import { useTranslations } from "next-intl";
-import { Hero } from "@components/MainPage";
+import {
+  About,
+  Admission,
+  Contact,
+  Hero,
+  Location,
+  Programme,
+} from "@components/Overview";
 
-const RootPage = () => {
-  // const t = useTranslations("Index");
+const OverviewPage = () => {
   return (
-    <div className=" text-default mt-10 mb-[90vh]">
-      {/* {t("title")} */}
+    <div className="relative w-full pt-20">
       <Hero />
+      <About />
+      <Programme />
+      <Location />
+      <Admission />
+      <Contact />
     </div>
   );
 };
 
-export default RootPage;
+export default OverviewPage;

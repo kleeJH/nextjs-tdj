@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import LocaleSwitch from "./locale-button";
 import ThemeSwitch from "./theme-button";
 
-const MobileNavigation = () => {
+const MobileNavigation = ({ hasNavLinks = true }: { hasNavLinks: boolean }) => {
   const [toggleMobileDrawer, setToggleMobileDrawer] = useState<boolean>(false);
 
   const showDrawer = () => {

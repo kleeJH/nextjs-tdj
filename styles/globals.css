@@ -11,6 +11,7 @@
     --primary: #ffd9eb;
     --secondary: #ffb8c8;
     --accent: #ff6f8b;
+    --drop-shadow-color: rgba(9, 8, 13, 0.25);
   }
   .dark {
     --text-color: #f3f2f7;
@@ -18,6 +19,7 @@
     --primary: #ff57a6;
     --secondary: #262626;
     --accent: #ff6f8b;
+    --drop-shadow-color: rgba(243, 242, 247, 0.25);
   }
 }
 
@@ -93,7 +95,7 @@
 }
 
 .container {
-  @apply max-w-[1400px] mx-auto px-4 md:px-24 w-full;
+  @apply max-w-[1400px] mx-auto sm:px-16 px-6 w-full;
 }
 
 /* Not Found */

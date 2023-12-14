@@ -3,5 +3,5 @@
 import NotFound from "@components/NotFound";
 
 export default function ErrorPage() {
-  return <NotFound type="notfound" />;
+  return <NotFound type="error" />;
 }

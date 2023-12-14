@@ -30,7 +30,3 @@ const LocaleLayout = ({
 };
 
 export default LocaleLayout;
-
-export function generateStaticParams() {
-  return Object.keys(Config.locales).map((locale) => ({ locale }));
-}

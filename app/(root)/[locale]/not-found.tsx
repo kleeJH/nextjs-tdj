@@ -4,7 +4,7 @@ import Navigation from "@components/Navigation";
 const NotFoundPage = () => {
   return (
     <>
-      <Navigation type="transparent" />
+      <Navigation bgType="transparent" hasNavLinks={false} />
       <NotFound type="notfound" />
     </>
   );

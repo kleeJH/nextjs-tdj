@@ -7,16 +7,18 @@ import {
 import Logo from "./public/assets/images/logo.png";
 
 const Config: {
-  locales: { [langs: string]: { icon: string | StaticImport } };
   defaultLocale: string;
+  locales: { [langs: string]: { icon: string | StaticImport } };
   logo: StaticImageData;
   socials: { [category: string]: { href: string } };
+  navigationLinks: { title: string; href: string }[];
   footer: {
     [categoryTranslationPath: string]: {
       [subCategoryTranslationPath: string]: { href: string };
     };
   };
 } = {
+  defaultLocale: "en",
   locales: {
     en: {
       icon: English,
@@ -25,13 +27,34 @@ const Config: {
       icon: Chinese,
     },
   },
-  defaultLocale: "en",
   logo: Logo,
   socials: {
     facebook: {
       href: "https://www.facebook.com/TJDEDU",
     },
   },
+  navigationLinks: [
+    {
+      title: "About",
+      href: "/#about",
+    },
+    {
+      title: "Programme",
+      href: "/#programme",
+    },
+    {
+      title: "Location",
+      href: "/#location",
+    },
+    {
+      title: "Admission",
+      href: "/#admission",
+    },
+    {
+      title: "Contact",
+      href: "/#contact",
+    },
+  ],
   footer: {
     "Footer.Top.Category.quickLinks": {
       "Footer.Top.SubCategory.aboutUs": {

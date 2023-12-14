@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -6,6 +7,7 @@ const config: Config = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./styles/sharedStyles.js",
   ],
   theme: {
     extend: {
@@ -24,6 +26,9 @@ const config: Config = {
         secondary: "var(--secondary)",
         accent: "var(--accent)",
         default: "var(--text-color)",
+      },
+      dropShadow: {
+        md: "0 4px 3px var(--drop-shadow-color)",
       },
     },
   },
