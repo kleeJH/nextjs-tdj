@@ -23,6 +23,7 @@ const Footer = () => {
                   alt="Tadika Desa Jaya's Logo"
                   width={60}
                   height={60}
+                  className="drop-shadow-md"
                 />
               </div>
               <p className="w-48 font-inter text-default font-semibold orange-text-gradient">

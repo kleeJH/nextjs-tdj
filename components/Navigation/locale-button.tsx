@@ -50,7 +50,7 @@ const LocaleSwitch = () => {
     <>
       <motion.div
         whileTap={{ scale: 0.8 }}
-        className="square-button focus:outline-none focus-visible:ring-2 shadow shadow-accent"
+        className="square-button focus:outline-none focus-visible:ring-2 shadow shadow-accent cursor-pointer"
         onClick={() => setToggleLocaleDropdown(!toggleLocaleDropdown)}
         ref={localeDropdownRef}
       >
@@ -68,13 +68,13 @@ const LocaleSwitch = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="bg-main absolute top-16 w-fit -translate-x-[31%] border-solid border-[1px] border-accent rounded-lg p-2 overflow-hidden focus:outline-none focus-visible:ring-2"
+            className="bg-main absolute top-16 w-fit -translate-x-[31%] border-solid border-[1px] border-accent rounded-lg p-2 overflow-hidden focus:outline-none focus-visible:ring-2 cursor-pointer"
           >
             <div className="flex flex-col gap-1">
             {Object.keys(Config.locales).map((locale) => (
               <div
                 key={locale}
-                className="h-10 flex items-center rounded-lg p-2 hover:bg-secondary transition duration-500 cursor-pointer font-semibold"
+                className="h-10 w-full flex items-center rounded-lg p-2 hover:bg-secondary transition duration-500 font-semibold"
                 onClick={() => handleDropdownItemClick(locale)}
               >
                 <Image

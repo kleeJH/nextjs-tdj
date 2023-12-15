@@ -30,6 +30,9 @@ const config: Config = {
       dropShadow: {
         md: "0 4px 3px var(--drop-shadow-color)",
       },
+      screens: {
+        nav: "1080px",
+      }
     },
   },
   plugins: [],

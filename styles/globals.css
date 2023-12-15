@@ -4,11 +4,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Globals */
+* {
+  @apply scroll-smooth;
+}
+
+li {
+  -webkit-tap-highlight-color: transparent;
+  outline: none !important;
+}
+
 @layer base {
   :root {
     --text-color: #09080d;
     --background: #fcfcfd;
-    --primary: #ffd9eb;
+    --background-foreground: #262626;
+    --primary: #ffb8c8;
     --secondary: #ffb8c8;
     --accent: #ff6f8b;
     --drop-shadow-color: rgba(9, 8, 13, 0.25);
@@ -16,11 +27,18 @@
   .dark {
     --text-color: #f3f2f7;
     --background: #050816;
-    --primary: #ff57a6;
-    --secondary: #262626;
+    --primary: #262626;
+    --secondary: #6b7280;
     --accent: #ff6f8b;
     --drop-shadow-color: rgba(243, 242, 247, 0.25);
   }
+}
+
+/* Section Wrapper */
+.hash-span {
+  margin-top: -100px;
+  padding-bottom: 100px;
+  display: block;
 }
 
 /* Background */
@@ -104,7 +122,7 @@
   background-image: radial-gradient(
       2px 2px at 40px 60px,
       #ccc,
-      rgba(0,0,0,0)
+      rgba(0, 0, 0, 0)
     ),
     radial-gradient(2px 2px at 20px 50px, var(--accent), rgba(0, 0, 0, 0)),
     radial-gradient(2px 2px at 30px 100px, var(--accent), rgba(0, 0, 0, 0)),
@@ -316,5 +334,5 @@
 
 /* Square Buttons */
 .square-button {
-  @apply rounded-lg p-2 duration-300 bg-secondary hover:bg-accent border-solid border-[1px] border-accent select-none;
+  @apply rounded-lg p-2 duration-300 bg-primary hover:bg-accent border-solid border-[1px] border-accent select-none;
 }

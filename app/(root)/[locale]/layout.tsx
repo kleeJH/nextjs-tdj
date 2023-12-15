@@ -24,7 +24,9 @@ const LocaleLayout = ({
       <div className="main">
         <div className="gradient" />
       </div>
-      <div className="app">{children}</div>
+      <div className="app">
+        {children}
+      </div>
     </NextIntlClientProvider>
   );
 };

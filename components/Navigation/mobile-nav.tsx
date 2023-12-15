@@ -1,13 +1,25 @@
-"use client";
+import Config from "@config";
 
-import { useState } from "react";
-import { AlignJustify, X } from "lucide-react";
-import { Drawer } from "antd";
+import { Dispatch, SetStateAction, useState } from "react";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import { Drawer } from "antd";
+import { AlignJustify } from "lucide-react";
+
 import LocaleSwitch from "./locale-button";
 import ThemeSwitch from "./theme-button";
 
-const MobileNavigation = ({ hasNavLinks = true }: { hasNavLinks: boolean }) => {
+const MobileNavigation = ({
+  hasNavLinks = true,
+  active,
+  setActive,
+}: {
+  hasNavLinks: boolean;
+  active: string;
+  setActive: Dispatch<SetStateAction<string>>;
+}) => {
+  const router = useRouter();
+
   const [toggleMobileDrawer, setToggleMobileDrawer] = useState<boolean>(false);
 
   const showDrawer = () => {
@@ -20,7 +32,7 @@ const MobileNavigation = ({ hasNavLinks = true }: { hasNavLinks: boolean }) => {
 
   return (
     <>
-      <div className="sm:hidden flex flex-1 justify-end items-center">
+      <div className="nav:hidden flex flex-1 justify-end items-center">
         <motion.div
           className="square-button"
           whileTap={{ scale: 0.8 }}
@@ -35,7 +47,7 @@ const MobileNavigation = ({ hasNavLinks = true }: { hasNavLinks: boolean }) => {
         placement="right"
         onClose={onClose}
         open={toggleMobileDrawer}
-        width={200}
+        width={250}
         extra={
           <div className="flex justify-end items-center gap-3 md:gap-5">
             <LocaleSwitch />
@@ -43,9 +55,25 @@ const MobileNavigation = ({ hasNavLinks = true }: { hasNavLinks: boolean }) => {
           </div>
         }
       >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+        <ul className="list-none flex flex-col gap-10 select-none">
+          {Config.navigationLinks.map((nav) => (
+            <li
+              key={nav.href}
+              className={`${
+                active === nav.title
+                  ? "text-accent drop-shadow-md"
+                  : "text-default"
+              } hover:text-accent font-inter font-medium cursor-pointer text-[16px]`}
+              onClick={() => {
+                setActive(nav.title);
+                router.replace(nav.href);
+                onClose();
+              }}
+            >
+              {nav.title}
+            </li>
+          ))}
+        </ul>
       </Drawer>
     </>
   );
