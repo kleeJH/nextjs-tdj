@@ -2,9 +2,11 @@ import Config from "@config";
 import "@styles/globals.css";
 
 import React from "react";
+
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 
 const LocaleLayout = ({
   children,
@@ -24,9 +26,7 @@ const LocaleLayout = ({
       <div className="main">
         <div className="gradient" />
       </div>
-      <div className="app">
-        {children}
-      </div>
+      <Suspense fallback={null}>{children}</Suspense>
     </NextIntlClientProvider>
   );
 };

@@ -1,5 +1,9 @@
+"use client";
+
 // import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 // Ref: https://github.com/typehero/typehero/blob/main/apps/web/src/app/not-found.tsx
 export default function NotFound({
@@ -7,6 +11,8 @@ export default function NotFound({
 }: {
   type?: "notfound" | "error";
 }) {
+  const router = useRouter();
+
   return (
     <>
       <div className="absolute top-0 flex w-full h-screen flex-col items-center justify-center gap-8 overflow-hidden">
@@ -30,6 +36,19 @@ export default function NotFound({
               : "An unexpected error has occured."}
           </p>
         </div>
+        <motion.div
+          whileHover={{
+            rotate: [0, -50, 50, -50, 0],
+            transition: { duration: 1 },
+          }}
+          whileTap={{ scale: 0.8 }}
+          onClick={() => {
+            router.replace("/");
+          }}
+          className="square-button pink-text-gradient font-mono text-base font-semibold"
+        >
+          Return to Home Page
+        </motion.div>
       </div>
     </>
   );

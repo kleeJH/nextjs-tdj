@@ -11,7 +11,7 @@ import Image from "next/image";
 import "./Navigation.css";
 
 const LocaleSwitch = () => {
-  const t = useTranslations("Locale");
+  const t = useTranslations();
   const currentLocale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -42,15 +42,18 @@ const LocaleSwitch = () => {
 
     // Else, set next locale and change route path
     setNextLocale(newLocale);
-    const regex = new RegExp(`(/(${Object.keys(Config.locales).join("|")}))+/?`, "g" );
-    router.replace(`/${newLocale}/${pathname.replaceAll(regex, "")}`)
+    const regex = new RegExp(
+      `(/(${Object.keys(Config.locales).join("|")}))+/?`,
+      "g"
+    );
+    router.replace(`/${newLocale}/${pathname.replaceAll(regex, "")}`);
   };
 
   return (
     <>
       <motion.div
         whileTap={{ scale: 0.8 }}
-        className="square-button focus:outline-none focus-visible:ring-2 shadow shadow-accent cursor-pointer"
+        className="square-button"
         onClick={() => setToggleLocaleDropdown(!toggleLocaleDropdown)}
         ref={localeDropdownRef}
       >
@@ -71,22 +74,22 @@ const LocaleSwitch = () => {
             className="bg-background absolute top-16 w-fit -translate-x-[31%] border-solid border-[1px] border-accent rounded-lg p-2 overflow-hidden focus:outline-none focus-visible:ring-2 cursor-pointer"
           >
             <div className="flex flex-col gap-1">
-            {Object.keys(Config.locales).map((locale) => (
-              <div
-                key={locale}
-                className="h-10 w-full flex items-center rounded-lg p-2 hover:bg-secondary transition duration-500 font-semibold"
-                onClick={() => handleDropdownItemClick(locale)}
-              >
-                <Image
-                  src={Config.locales[locale].icon}
-                  alt={`${t(locale)}`}
-                  height={30}
-                  width={30}
-                  className="pr-2"
-                />
-                {`${t(locale)}`}
-              </div>
-            ))}
+              {Object.keys(Config.locales).map((locale) => (
+                <div
+                  key={locale}
+                  className="h-10 w-full flex items-center rounded-lg p-2 hover:bg-secondary transition duration-500 font-semibold"
+                  onClick={() => handleDropdownItemClick(locale)}
+                >
+                  <Image
+                    src={Config.locales[locale].icon}
+                    alt={`${locale}`}
+                    height={30}
+                    width={30}
+                    className="pr-2"
+                  />
+                  {`${t(`Locale.${locale}`)}`}
+                </div>
+              ))}
             </div>
           </motion.div>
         )}

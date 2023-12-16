@@ -4,6 +4,11 @@
     "zh": "Chinese"
   },
 
+  "Notification": {
+    "Button": {
+    }
+  },
+
   "Index": {
     "title": "Hello world!"
   },
@@ -22,6 +27,7 @@
         "career": "Career"
       }
     },
+
     "Bottom": {
       "madeWith": "Made with love ❤️.",
       "socialMedia": "Social Media",

@@ -1,6 +1,6 @@
-import type { ThemeConfig } from 'antd';
+import { ThemeConfig } from 'antd';
 
-const theme: ThemeConfig = {
+export const AntdTheme: ThemeConfig = {
   token: {
     colorBgElevated: "var(--background)",
     colorIcon: "var(--text-default)",
@@ -14,5 +14,3 @@ const theme: ThemeConfig = {
     }
   }
 };
-
-export default theme;

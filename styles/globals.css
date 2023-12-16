@@ -27,19 +27,37 @@ li {
     --secondary: #ffb8c8;
     --accent: #ff6f8b;
     --drop-shadow-color: rgba(9, 8, 13, 0.25);
+
+    /* --clr-1: #052b2f;
+    --clr-2: #073438;
+    --clr-3: #0e4b50;
+    --clr-4: #2d8f85;
+    --clr-5: #637c54; */
+
+    --clr-1: #ff6f8b;
+    --clr-2: #ff8b6f;
+    --clr-3: #ffbb6f;
+    --clr-4: #ff6fbb;
+    --clr-5: #d46fff;
   }
   .dark {
     --text-default: #f3f2f7;
     --text-link: #6b7280;
     --text-sectionSubText: #6b7280;
-    
+
     --background: #050816;
     --foreground: #262626;
 
-    --primary: #C32C50;
+    --primary: #c32c50;
     --secondary: #470011;
     --accent: #ff6f8b;
-    --drop-shadow-color: rgba(243, 242, 247, 0.25);
+    --drop-shadow-color: rgba(255, 255, 255, 0.2);
+
+    --clr-1: #ff6f8b;
+    --clr-2: #ff8b6f;
+    --clr-3: #ffbb6f;
+    --clr-4: #ff6fbb;
+    --clr-5: #d46fff;
   }
 }
 
@@ -114,13 +132,7 @@ li {
   }
 } */
 
-/* Application */
-
-.app {
-  @apply relative z-10 flex justify-center items-center flex-col;
-  /*  max-w-7xl mx-auto sm:px-16 px-6 */
-}
-
+/* General */
 .container {
   @apply max-w-[1400px] mx-auto sm:px-16 px-6 w-full;
 }
@@ -203,7 +215,7 @@ li {
   }
 }
 
-/* Gradients */
+/* Background Gradients */
 .black-gradient {
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -244,6 +256,7 @@ li {
   background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
 }
 
+/* Text Gradients */
 .orange-text-gradient {
   background: #f12711; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -277,20 +290,7 @@ li {
 }
 
 .blue-text-gradient {
-  /* background: -webkit-linear-gradient(#eee, #333); */
-  background: #56ccf2; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #2f80ed,
-    #56ccf2
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #2f80ed,
-    #56ccf2
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  @apply bg-gradient-to-r from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent;
 }
 
 .pink-text-gradient {
@@ -343,5 +343,118 @@ li {
 
 /* Square Buttons */
 .square-button {
-  @apply rounded-lg p-2 duration-300 bg-foreground hover:bg-accent border-solid border-[1px] border-accent select-none;
+  @apply rounded-lg p-2 duration-300 bg-foreground hover:bg-accent border-solid border-[1px] border-accent select-none focus:outline-none focus-visible:ring-2 shadow shadow-accent cursor-pointer text-textDefault;
+}
+
+/* Border gradient animations */
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 360deg;
+  inherits: false;
+}
+
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}
+
+.card-border-gradient {
+  position: relative;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--clr-3),
+    var(--clr-4),
+    var(--clr-5),
+    var(--clr-4),
+    var(--clr-3)
+  );
+  animation: rotation 5s linear infinite;
+}
+
+.card-border-gradient::after {
+  content: "";
+  position: absolute;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--clr-3),
+    var(--clr-4),
+    var(--clr-5),
+    var(--clr-4),
+    var(--clr-3)
+  );
+  border-radius: inherit;
+  z-index: -1;
+  inset: 0.5rem;
+  animation: rotation 20s linear infinite;
+  filter: blur(1.5rem);
+}
+
+/* Shiny Button Animation */
+.shiny-button-dark {
+  background: linear-gradient(
+    var(--gradient-angle),
+    hsla(0, 0%, 100%, 0.5),
+    hsla(0, 0%, 100%, 0.1),
+    #fff,
+    hsla(0, 0%, 100%, 0.3)
+  ) !important;
+  animation: rotation 5s linear infinite reverse;
+}
+
+.shiny-button-dark {
+  background: linear-gradient(
+    var(--gradient-angle),
+    hsla(0, 0%, 100%, 0.5),
+    hsla(0, 0%, 100%, 0.1),
+    #fff,
+    hsla(0, 0%, 100%, 0.3)
+  ) !important;
+  animation: rotation 5s linear infinite reverse;
+}
+
+/* Envelope */
+.envelope {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgb(198, 40, 40) 0,
+    rgb(198, 40, 40) 5%,
+    rgb(255, 255, 255) 5%,
+    rgb(255, 255, 255) 10%,
+    rgb(21, 101, 192) 10%,
+    rgb(21, 101, 192) 15%,
+    rgb(255, 255, 255) 15%,
+    rgb(255, 255, 255) 20%,
+    rgb(198, 40, 40) 20%
+  );
+  background-size: 200% 100%;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.envelope:hover {
+  animation: gradientAnimation 12s linear infinite reverse;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgb(198, 40, 40) 0,
+    rgb(198, 40, 40) 5%,
+    rgb(255, 255, 255) 5%,
+    rgb(255, 255, 255) 10%,
+    rgb(21, 101, 192) 10%,
+    rgb(21, 101, 192) 15%,
+    rgb(255, 255, 255) 15%,
+    rgb(255, 255, 255) 20%,
+    rgb(198, 40, 40) 20%
+  );
+  background-size: 200% 100%;
 }

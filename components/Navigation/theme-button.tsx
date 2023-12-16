@@ -19,7 +19,7 @@ const ThemeSwitch = () => {
       {mounted ? (
         <motion.button
           whileTap={{ scale: 0.8 }}
-          className="square-button shadow shadow-accent"
+          className="square-button"
           onClick={() => {
             setTheme(resolvedTheme === "dark" ? "light" : "dark");
           }}

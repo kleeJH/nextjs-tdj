@@ -7,9 +7,17 @@ import {
 import Logo from "./public/assets/images/logo.png";
 
 const Config: {
+  logo: StaticImageData;
+  personal: {
+    address: {
+      street: string;
+      residential: string;
+      postalTown: string;
+      stateCountry: string;
+    };
+  };
   defaultLocale: string;
   locales: { [langs: string]: { icon: string | StaticImport } };
-  logo: StaticImageData;
   socials: { [category: string]: { href: string } };
   navigationLinks: { title: string; href: string }[];
   footer: {
@@ -18,6 +26,15 @@ const Config: {
     };
   };
 } = {
+  logo: Logo,
+  personal: {
+    address: {
+      street: "Lot 8 & 10, Jalan 34,",
+      residential: "Taman Desa Jaya,",
+      postalTown: "52100 Kuala Lumpur,",
+      stateCountry: " Wilayah Persekutuan, Malaysia",
+    },
+  },
   defaultLocale: "en",
   locales: {
     en: {
@@ -27,7 +44,6 @@ const Config: {
       icon: Chinese,
     },
   },
-  logo: Logo,
   socials: {
     facebook: {
       href: "https://www.facebook.com/TJDEDU",

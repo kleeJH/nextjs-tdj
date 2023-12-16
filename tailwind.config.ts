@@ -34,9 +34,13 @@ const config: Config = {
       dropShadow: {
         md: "0 4px 3px var(--drop-shadow-color)",
       },
+      boxShadow: {
+        "3xl":
+          "0 20px 25px -5px var(--drop-shadow-color), 0 8px 10px -6px var(--drop-shadow-color)",
+      },
       screens: {
         nav: "1080px",
-      }
+      },
     },
   },
   plugins: [],

@@ -8,10 +8,10 @@ import Config from "@config";
 
 import "./Footer.css";
 
-const Footer = () => {
-  const t = useTranslations()
+const Footer = ({ hidden = false }: { hidden?: boolean }) => {
+  const t = useTranslations();
   return (
-    <footer className="w-full bottom-0 bg-background py-6">
+    <footer className={`w-full bottom-0 bg-background py-6 ${hidden && "hidden"}`}>
       <div className="container">
         <div className="flex flex-col">
           <div className="flex flex-row justify-between items-center gap-8 max-sm:flex-col max-sm:items-start max-sm:justfiy-start">
@@ -33,7 +33,10 @@ const Footer = () => {
               <div className="flex flex-row gap-8 justify-center items-center max-sm:flex-col max-sm:items-start">
                 {Object.entries(Config.footer).map(
                   ([categoryTranslationPath, categoryValue]) => (
-                    <div key={categoryTranslationPath} className="flex flex-row gap-8">
+                    <div
+                      key={categoryTranslationPath}
+                      className="flex flex-row gap-8"
+                    >
                       <span className="vertical !h-28 max-sm:hidden" />
                       <div>
                         <h4 className="text-[18px] font-satoshi font-bold mb-2 capitalize">
@@ -41,7 +44,10 @@ const Footer = () => {
                         </h4>
                         <div className="flex flex-col gap-1">
                           {Object.entries(categoryValue).map(
-                            ([subCategoryTranslationPath, subCategoryValue]) => (
+                            ([
+                              subCategoryTranslationPath,
+                              subCategoryValue,
+                            ]) => (
                               <Link
                                 key={subCategoryTranslationPath}
                                 href={subCategoryValue.href}
@@ -68,18 +74,18 @@ const Footer = () => {
           <div className="flex flex-col gap-4">
             <div className="flex flex-row justify-between items-center gap-2 max-sm:flex-col max-sm:items-start">
               <p className="font-inter pink-text-gradient">
-              {t("Footer.Bottom.madeWith")}
+                {t("Footer.Bottom.madeWith")}
               </p>
               <div>
                 <div className="flex flex-row gap-5 text-sm font-inter justify-center items-center h-10">
                   <p className="font-satoshi text-sm font-semibold max-sm:hidden ">
-                  {t("Footer.Bottom.socialMedia")}
+                    {t("Footer.Bottom.socialMedia")}
                   </p>
                   <span className="vertical max-sm:!h-5 max-sm:hidden" />
                   <Link
                     href={Config.socials["facebook"].href}
                     target="_block"
-                    className="square-button focus:outline-none focus-visible:ring-2 shadow shadow-accent text-textDefault"
+                    className="square-button"
                   >
                     <Facebook aria-hidden="true" className="h-5 w-5" />
                   </Link>
@@ -100,7 +106,8 @@ const Footer = () => {
                 </Link>
               </div>
               <p className="text-right font-inter text-gray-500 text-sm max-sm:text-left">
-                © {new Date().getFullYear()} Tadika Desa Jaya. {t("Footer.Bottom.allRightsReserved")}.
+                © {new Date().getFullYear()} Tadika Desa Jaya.{" "}
+                {t("Footer.Bottom.allRightsReserved")}.
               </p>
             </div>
           </div>

@@ -3,9 +3,16 @@
     "en": "英語",
     "zh": "中文"
   },
+
+  "Notification": {
+    "Button": {
+    }
+  },
+
   "Index": {
     "title": "你好世界!"
   },
+
   "Footer": {
     "Top": {
       "Motto": "培养好奇心，培养信心，激励终身学习者。",
@@ -20,6 +27,7 @@
         "career": "职业生涯"
       }
     },
+
     "Bottom": {
       "madeWith": "用爱制造 ❤️。",
       "socialMedia": "社交媒体",
