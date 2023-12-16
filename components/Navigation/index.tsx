@@ -21,7 +21,7 @@ const Navigation = ({
   return (
     <nav
       className={`${
-        bgType === "default" ? "bg-main" : ""
+        bgType === "default" ? "bg-background" : ""
       } z-50 w-full flex items-center py-4 top-0 fixed`}
     >
       <div className="container h-fit justify-between items-center inline-flex">
@@ -49,7 +49,7 @@ const Navigation = ({
                 className={`${
                   active === nav.title
                     ? "text-accent drop-shadow-md"
-                    : "text-default"
+                    : "text-textDefault"
                 } hover:text-accent font-inter font-medium cursor-pointer text-[16px]`}
                 onClick={() => {
                   setActive(nav.title);

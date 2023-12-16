@@ -21,11 +21,15 @@ const config: Config = {
         inter: ["Inter", "sans-serif"],
       },
       colors: {
-        main: "var(--background)",
+        textDefault: "var(--text-default)",
+        textLink: "var(--text-link)",
+
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+
         primary: "var(--primary)",
         secondary: "var(--secondary)",
         accent: "var(--accent)",
-        default: "var(--text-color)",
       },
       dropShadow: {
         md: "0 4px 3px var(--drop-shadow-color)",

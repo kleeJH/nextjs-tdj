@@ -16,19 +16,28 @@ li {
 
 @layer base {
   :root {
-    --text-color: #09080d;
+    --text-default: #09080d;
+    --text-link: #6b7280;
+    --text-sectionSubText: #ffb8c8;
+
     --background: #fcfcfd;
-    --background-foreground: #262626;
-    --primary: #ffb8c8;
+    --foreground: #ffb8c8;
+
+    --primary: #d33a5e;
     --secondary: #ffb8c8;
     --accent: #ff6f8b;
     --drop-shadow-color: rgba(9, 8, 13, 0.25);
   }
   .dark {
-    --text-color: #f3f2f7;
+    --text-default: #f3f2f7;
+    --text-link: #6b7280;
+    --text-sectionSubText: #6b7280;
+    
     --background: #050816;
-    --primary: #262626;
-    --secondary: #6b7280;
+    --foreground: #262626;
+
+    --primary: #C32C50;
+    --secondary: #470011;
     --accent: #ff6f8b;
     --drop-shadow-color: rgba(243, 242, 247, 0.25);
   }
@@ -334,5 +343,5 @@ li {
 
 /* Square Buttons */
 .square-button {
-  @apply rounded-lg p-2 duration-300 bg-primary hover:bg-accent border-solid border-[1px] border-accent select-none;
+  @apply rounded-lg p-2 duration-300 bg-foreground hover:bg-accent border-solid border-[1px] border-accent select-none;
 }

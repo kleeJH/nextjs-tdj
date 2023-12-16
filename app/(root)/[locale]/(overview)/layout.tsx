@@ -5,7 +5,7 @@ import Navigation from "@components/Navigation";
 
 const OverviewLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="relative w-full h-full bg-main">
+    <div className="relative w-full h-full bg-background">
       <Navigation />
       {children}
       <Footer />

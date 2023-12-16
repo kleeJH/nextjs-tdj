@@ -1,14 +1,7 @@
-"use client";
-
-import Config from "@config";
-
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-
 import LocaleSwitch from "./locale-button";
 import ThemeSwitch from "./theme-button";
 
-const DesktopNavigation = ({
+const  DesktopNavigation = ({
   hasNavLinks = true,
 }: {
   hasNavLinks: boolean;

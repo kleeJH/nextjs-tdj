@@ -62,7 +62,7 @@ const MobileNavigation = ({
               className={`${
                 active === nav.title
                   ? "text-accent drop-shadow-md"
-                  : "text-default"
+                  : "text-textDefault"
               } hover:text-accent font-inter font-medium cursor-pointer text-[16px]`}
               onClick={() => {
                 setActive(nav.title);

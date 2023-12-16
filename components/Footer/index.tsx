@@ -3,7 +3,6 @@ import { useTranslations } from "next-intl";
 import { Facebook } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import ThemeSwitch from "@components/Navigation/theme-button";
 
 import Config from "@config";
 
@@ -12,7 +11,7 @@ import "./Footer.css";
 const Footer = () => {
   const t = useTranslations()
   return (
-    <footer className="w-full bottom-0 bg-main py-6">
+    <footer className="w-full bottom-0 bg-background py-6">
       <div className="container">
         <div className="flex flex-col">
           <div className="flex flex-row justify-between items-center gap-8 max-sm:flex-col max-sm:items-start max-sm:justfiy-start">
@@ -26,7 +25,7 @@ const Footer = () => {
                   className="drop-shadow-md"
                 />
               </div>
-              <p className="w-48 font-inter text-default font-semibold orange-text-gradient">
+              <p className="w-48 font-inter font-semibold orange-text-gradient">
                 {t("Footer.Top.Motto")}
               </p>
             </div>
@@ -62,7 +61,7 @@ const Footer = () => {
           </div>
 
           {/* Horizontal Divider */}
-          <hr className="my-6 border-default" />
+          <hr className="my-6 border-textDefault" />
           {/* <Divider /> */}
 
           {/* Footer Below */}
@@ -73,15 +72,14 @@ const Footer = () => {
               </p>
               <div>
                 <div className="flex flex-row gap-5 text-sm font-inter justify-center items-center h-10">
-                  <ThemeSwitch />
-                  <span className="vertical !border-gray-500 h-full" />
-                  <p className="fonr-satoshi text-sm font-semibold max-sm:hidden">
+                  <p className="font-satoshi text-sm font-semibold max-sm:hidden ">
                   {t("Footer.Bottom.socialMedia")}
                   </p>
+                  <span className="vertical max-sm:!h-5 max-sm:hidden" />
                   <Link
                     href={Config.socials["facebook"].href}
                     target="_block"
-                    className="square-button focus:outline-none focus-visible:ring-2 shadow shadow-accent text-default hover:text-default"
+                    className="square-button focus:outline-none focus-visible:ring-2 shadow shadow-accent text-textDefault"
                   >
                     <Facebook aria-hidden="true" className="h-5 w-5" />
                   </Link>
@@ -93,7 +91,7 @@ const Footer = () => {
                 <Link href={"/tos"} className="footer-link-text text-center">
                   <p>{t("Footer.Bottom.termsOfService")}</p>
                 </Link>
-                <span className="vertical !border-gray-500 max-sm:!h-5 max-sm:hidden" />
+                <span className="vertical max-sm:!h-5 max-sm:hidden" />
                 <Link
                   href={"/privacy"}
                   className="footer-link-text text-center"
