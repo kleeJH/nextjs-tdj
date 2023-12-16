@@ -6,9 +6,20 @@ import { styles } from "@styles/sharedStyles";
 const Location = () => {
   return (
     <>
-      <div className="">
+      <div className="mb-10">
         <p className={styles.sectionSubText}>WHERE WE ARE</p>
-        <h2 className={styles.sectionHeadText}>Location.</h2>
+        <h2 className={styles.sectionHeadText}>Locate Us.</h2>
+      </div>
+
+      <div className="flex flex-row gap-5">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.52899924272!2d101.6224636113175!3d3.217510852713465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4671bc8fae11%3A0x35f80d5ab94f270!2sTadika%20Desa%20Jaya!5e0!3m2!1sen!2smy!4v1702712483830!5m2!1sen!2smy"
+          className="border-0 w-1/2 h-[400px] dark:invert-[90%] dark:hue-rotate-180"
+          allowFullScreen={false}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
+        <div>ADDRESS CARD HERE</div>
       </div>
     </>
   );
