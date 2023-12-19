@@ -50,7 +50,7 @@ li {
     --foreground: #262626;
 
     --primary: #c32c50;
-    --secondary: #470011;
+    --secondary: #ffb8c8;
     --accent: #ff6f8b;
     --drop-shadow-color: rgba(255, 255, 255, 0.2);
 
@@ -116,70 +116,6 @@ li {
     background-position: center;
   }
 }
-
-/* .main {
-  width: 100vw;
-  min-height: 100vh;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  padding: 120px 24px 160px 24px;
-  pointer-events: none;
-}
-
-.main:before {
-  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
-  position: absolute;
-  content: "";
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  top: 0;
-}
-
-.main:after {
-  content: "";
-  background-image: url("/assets/images/grid.svg");
-  z-index: 1;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  opacity: 0.4;
-  filter: invert(1);
-}
-
-.gradient {
-  height: fit-content;
-  z-index: 3;
-  width: 100%;
-  max-width: 640px;
-  background-image: radial-gradient(
-      at 27% 37%,
-      hsla(215, 98%, 61%, 1) 0px,
-      transparent 0%
-    ),
-    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
-    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
-    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
-    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
-    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
-    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  filter: blur(100px) saturate(150%);
-  top: 80px;
-  opacity: 0.15;
-}
-
-@media screen and (max-width: 640px) {
-  .main {
-    padding: 0;
-  }
-} */
-
 /* General */
 .container {
   @apply max-w-[1400px] mx-auto sm:px-16 px-6 w-full;
@@ -306,92 +242,19 @@ li {
 
 /* Text Gradients */
 .orange-text-gradient {
-  background: #f12711; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #f12711,
-    #f5af19
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #f12711,
-    #f5af19
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.green-text-gradient {
-  background: #11998e; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #11998e,
-    #38ef7d
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #11998e,
-    #38ef7d
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  @apply bg-gradient-to-b from-[#f5af19] to-[#f12711]  bg-clip-text text-transparent;
 }
 
 .purple-blue-text-gradient {
-  @apply bg-gradient-to-r from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-indigo-500 to-cyan-500 bg-clip-text text-transparent;
 }
 
-.blue-pinktext-gradient {
+.blue-pink-text-gradient {
   @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent;
 }
 
 .pink-text-gradient {
-  @apply  bg-gradient-to-r from-red-500 via-pink-600 to-purple-500 bg-clip-text text-transparent;
-  /* background: #ec008c;
-  background: -webkit-linear-gradient(
-    to right,
-    #fc6767,
-    #ec008c
-  );
-  background: linear-gradient(
-    to right,
-    #fc6767,
-    #ec008c
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-}
-
-.cyan-text-gradient {
-  background: #5ed9ff;
-  background: -webkit-linear-gradient(
-    to top,
-    #5ed9ff,
-    #6a73f0
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #5ed9ff,
-    #6a73f0
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.violet-text-gradient {
-  background: #d95eff;
-  background: -webkit-linear-gradient(
-    to top,
-    #d95eff,
-    #a303ff
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #d95eff,
-    #a303ff
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  @apply bg-gradient-to-r from-red-500 via-pink-600 to-purple-500 bg-clip-text text-transparent;
 }
 
 /* Square Buttons */

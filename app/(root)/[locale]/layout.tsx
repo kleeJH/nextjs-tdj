@@ -23,9 +23,6 @@ const LocaleLayout = ({
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <div className="main">
-        <div className="gradient" />
-      </div>
       <Suspense fallback={null}>{children}</Suspense>
     </NextIntlClientProvider>
   );
