@@ -27,7 +27,7 @@ const Navigation = ({
       <div className="container h-fit justify-between items-center inline-flex">
         <Link href={"/"} className="relative flex items-center gap-4">
           <Image
-            src={Config.logo}
+            src={Config.logoLowDef}
             alt="TDJ Logo"
             width={32}
             height={32}

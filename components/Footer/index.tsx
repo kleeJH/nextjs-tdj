@@ -18,7 +18,7 @@ const Footer = ({ hidden = false }: { hidden?: boolean }) => {
             <div className="flex flex-row gap-5">
               <div className="flex items-center select-none">
                 <Image
-                  src={Config.logo}
+                  src={Config.logoLowDef}
                   alt="Tadika Desa Jaya's Logo"
                   width={60}
                   height={60}

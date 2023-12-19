@@ -52,7 +52,7 @@ const Location = () => {
             Find us at
           </h4>
           <motion.div
-            className="relative envelope rounded-xl w-fit h-fit p-2 border-black border-[1px] shadow-3xl"
+            className="relative envelope rounded-xl w-[80%] h-fit p-2 border-black border-[1px] shadow-3xl"
             whileHover={{ scale: 1.2 }}
             onHoverStart={() => {
               setShowCopyButton(true);

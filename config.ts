@@ -4,10 +4,13 @@ import {
   StaticImageData,
   StaticImport,
 } from "next/dist/shared/lib/get-img-props";
-import Logo from "./public/assets/images/logo.png";
+import LowDefLogo from "./public/assets/images/logo.png";
+import HighDefLogo from "./public/assets/images/logo-big.png";
+import TiltCardPic1 from "./public/assets/images/card-malaysiaDay.jpg";
 
 const Config: {
-  logo: StaticImageData;
+  logoLowDef: StaticImageData;
+  logoHighDef: StaticImageData;
   personal: {
     address: {
       street: string;
@@ -15,6 +18,10 @@ const Config: {
       postalTown: string;
       stateCountry: string;
     };
+  };
+  hero: {
+    picture1: StaticImport;
+    picture2: StaticImport;
   };
   defaultLocale: string;
   locales: { [langs: string]: { icon: string | StaticImport } };
@@ -26,7 +33,8 @@ const Config: {
     };
   };
 } = {
-  logo: Logo,
+  logoLowDef: LowDefLogo,
+  logoHighDef: HighDefLogo,
   personal: {
     address: {
       street: "Lot 8 & 10, Jalan 34,",
@@ -34,6 +42,10 @@ const Config: {
       postalTown: "52100 Kuala Lumpur,",
       stateCountry: " Wilayah Persekutuan, Malaysia",
     },
+  },
+  hero: {
+    picture1: TiltCardPic1,
+    picture2: TiltCardPic1,
   },
   defaultLocale: "en",
   locales: {

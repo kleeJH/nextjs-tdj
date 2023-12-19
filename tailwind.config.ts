@@ -19,6 +19,7 @@ const config: Config = {
       fontFamily: {
         satoshi: ["Satoshi", "sans-serif"],
         inter: ["Inter", "sans-serif"],
+        ooohBaby: ["Oooh Baby", "sans-serif"],
       },
       colors: {
         textDefault: "var(--text-default)",
@@ -32,9 +33,19 @@ const config: Config = {
         accent: "var(--accent)",
       },
       dropShadow: {
-        md: "0 4px 3px var(--drop-shadow-color)",
+        sm: "0 1px 1px var(--drop-shadow-color)",
+        md: ["0 4px 3px var(--drop-shadow-color)", "0 2px 2px var(--drop-shadow-color)"],
+        lg: ["0 10px 8px var(--drop-shadow-color)", "0 4px 3px var(--drop-shadow-color)"],
+        xl: ["0 20px 13px var(--drop-shadow-color)", "0 8px 5px var(--drop-shadow-color)"],
+        "2xl": "0 25px 25px var(--drop-shadow-color)",
       },
       boxShadow: {
+        card: "0px 35px 120px -15px  var(--drop-shadow-color)",
+        sm: "0 1px 2px 0 var(--drop-shadow-color)",
+        md: "0 4px 6px -1px var(--drop-shadow-color), 0 2px 4px -2px var(--drop-shadow-color)",
+        lg: "0 10px 15px -3px var(--drop-shadow-color), 0 4px 6px -4px var(--drop-shadow-color)",
+        xl: "0 20px 25px -5px var(--drop-shadow-color), 0 8px 10px -6px var(--drop-shadow-color)",
+        "2xl": "0 25px 50px -12px var(--drop-shadow-color)",
         "3xl":
           "0 20px 25px -5px var(--drop-shadow-color), 0 8px 10px -6px var(--drop-shadow-color)",
       },

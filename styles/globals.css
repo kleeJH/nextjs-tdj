@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -61,6 +62,13 @@ li {
   }
 }
 
+@layer utilities {
+  .test1 {
+    display: block;
+    text-align-last: justify;
+  }
+}
+
 /* Section Wrapper */
 .hash-span {
   margin-top: -100px;
@@ -69,6 +77,46 @@ li {
 }
 
 /* Background */
+.moving-grid-background {
+  will-change: transform;
+  background-size: 3rem 3rem;
+  background-image: linear-gradient(
+      to right,
+      var(--foreground) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, var(--foreground) 1px, transparent 1px);
+  animation: movingbackground 90s linear infinite !important;
+}
+
+@keyframes movingbackground {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .moving-grid-background {
+    animation: none !important;
+  }
+}
+
+.animate-bg-gradient-to-center {
+  animation: bg-to-center 1s 0.75s ease 1 forwards;
+}
+.animate-bg-gradient-to-center-title {
+  animation: bg-to-center 1s 0.95s ease 1 forwards;
+}
+
+@keyframes bg-to-center {
+  to {
+    background-position: center;
+  }
+}
+
 /* .main {
   width: 100vw;
   min-height: 100vh;
@@ -289,24 +337,29 @@ li {
   -webkit-text-fill-color: transparent;
 }
 
-.blue-text-gradient {
+.purple-blue-text-gradient {
   @apply bg-gradient-to-r from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent;
 }
 
+.blue-pinktext-gradient {
+  @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent;
+}
+
 .pink-text-gradient {
-  background: #ec008c; /* fallback for old browsers */
+  @apply  bg-gradient-to-r from-red-500 via-pink-600 to-purple-500 bg-clip-text text-transparent;
+  /* background: #ec008c;
   background: -webkit-linear-gradient(
     to right,
     #fc6767,
     #ec008c
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  );
   background: linear-gradient(
     to right,
     #fc6767,
     #ec008c
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 
 .cyan-text-gradient {

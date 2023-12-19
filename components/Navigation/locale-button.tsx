@@ -11,7 +11,7 @@ import Image from "next/image";
 import "./Navigation.css";
 
 const LocaleSwitch = () => {
-  const t = useTranslations();
+  const t = useTranslations("Locale");
   const currentLocale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -82,12 +82,12 @@ const LocaleSwitch = () => {
                 >
                   <Image
                     src={Config.locales[locale].icon}
-                    alt={`${locale}`}
+                    alt={`${t(locale)}`}
                     height={30}
                     width={30}
                     className="pr-2"
                   />
-                  {`${t(`Locale.${locale}`)}`}
+                  {`${t(locale)}`}
                 </div>
               ))}
             </div>
