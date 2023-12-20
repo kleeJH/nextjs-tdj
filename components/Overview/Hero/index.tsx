@@ -17,8 +17,36 @@ const Hero = () => {
       icon: Config.hero.picture1,
       motionProps: {
         initial: {
-          y: -20,
+          y: -80,
+          x: 40,
+          opacity: 0,
+        },
+        animate: {
+          y: -70,
+          opacity: 1,
+        },
+      },
+    },
+    {
+      icon: Config.hero.picture1,
+      motionProps: {
+        initial: {
+          y: 60,
           x: 0,
+          opacity: 0,
+        },
+        animate: {
+          y: 50,
+          opacity: 1,
+        },
+      },
+    },
+    {
+      icon: Config.hero.picture1,
+      motionProps: {
+        initial: {
+          y: -40,
+          x: -30,
           opacity: 0,
         },
         animate: {
@@ -27,41 +55,15 @@ const Hero = () => {
         },
       },
     },
-    {
-      icon: Config.hero.picture1,
-      motionProps: {
-        initial: {
-          y: 100,
-          x: -50,
-          opacity: 0,
-        },
-        animate: {
-          y: 110,
-          opacity: 1,
-        },
-      },
-    },
-    {
-      icon: Config.hero.picture1,
-      motionProps: {
-        initial: {
-          y: 0,
-          x: -90,
-          opacity: 0,
-        },
-        animate: {
-          y: -10,
-          opacity: 1,
-        },
-      },
-    },
   ];
   return (
-    <div className="container relative min-h-[calc(80vh)] max-nav:pt-16 overflow-hidden">
+    <div className="container relative min-h-[calc(90vh)] max-nav:pt-16 overflow-hidden">
+
       <div className="absolute inset-10 -z-30 overflow-hidden rounded-full opacity-70 nav:hidden">
         <BackgroundGrid />
       </div>
-      <div className="relative grid justify-center items-center nav:grid-cols-2 gap-24">
+
+      <div className="relative grid justify-center items-center grid-cols-1 nav:grid-cols-2 gap-10 nav:gap-24">
         <div className="flex flex-col gap-5 justify-center items-center nav:items-start">
           <h1 className={`${styles.heroWelcomeText}`}>Welcome!</h1>
           <div className="flex w-fit flex-row justify-center items-center gap-5 nav:pr-5">
@@ -97,9 +99,10 @@ const Hero = () => {
             begins here.
           </p>
         </div>
+        {/* <div className="relative hidden nav:flex nav:flex-row justify-center items-center overflow-visible h-[600px] w-full"> */}
 
-        <div className="relative hidden nav:flex nav:flex-row justify-center items-center overflow-visible h-[600px] w-full">
-          <div className="absolute -inset-40 top-1/2 -z-30 -translate-y-1/2 translate-x-[-30px] overflow-hidden rounded-full">
+        <div className="relative hidden sm:flex sm:flex-row justify-center items-center overflow-visible h-[500px] nav:h-[600px] w-full">
+          <div className="hidden nav:flex absolute -inset-40 top-1/2 -z-30 -translate-y-1/2 translate-x-[-30px] overflow-hidden rounded-full">
             <BackgroundGrid />
           </div>
           {cards.map((card, index) => (

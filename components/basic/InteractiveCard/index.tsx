@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { useEffect, useState, type MouseEvent } from "react";
 import {
   motion,
   useMotionTemplate,
@@ -6,8 +9,8 @@ import {
   type MotionStyle,
   type MotionValue,
 } from "framer-motion";
-import { useEffect, useState, type MouseEvent } from "react";
 import { useIsMobile } from "@utils/useIsMobile";
+
 import "./InteractiveCard.css";
 
 type WrapperStyle = MotionStyle & {

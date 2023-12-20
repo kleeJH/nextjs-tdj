@@ -6,11 +6,14 @@ export const AntdTheme: ThemeConfig = {
     colorIcon: "var(--text-default)",
     colorIconHover: "var(--accent)",
     colorText: "var(--text-default)",
-    colorSplit: "var(--text-default)",
+    colorSplit: "var(--text-default)"
   },
   components: {
     Layout: {
       footerBg: "var(--background)",
+    },
+    Collapse: {
+      contentBg: "var(--background)"
     }
   }
 };

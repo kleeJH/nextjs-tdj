@@ -48,7 +48,7 @@ const Location = () => {
           />
         </div>
         <div className="w-full md:w-2/5 h-fit md:h-96 px-5 flex flex-col gap-8 items-center">
-          <h4 className={`${styles.withinSectionHeadText} text-left`}>
+          <h4 className={`${styles.withinSectionAddressHeadText} text-left`}>
             Find us at
           </h4>
           <motion.div
@@ -75,18 +75,13 @@ const Location = () => {
               <Copy aria-hidden="true" className="h-3 w-3" />
             </motion.button>
             <div className="bg-foreground p-5 rounded-xl border-black border-[1px]">
-              <p className={styles.withinSectionSubText}>
-                {Config.personal.address.street}
-              </p>
-              <p className={styles.withinSectionSubText}>
-                {Config.personal.address.residential}
-              </p>
-              <p className={styles.withinSectionSubText}>
-                {Config.personal.address.postalTown}
-              </p>
-              <p className={styles.withinSectionSubText}>
+              <p className={styles.withinSectionAddressText}>
+                {Config.personal.address.street} <br/>
+                {Config.personal.address.residential} <br/>
+                {Config.personal.address.postalTown}<br/>
                 {Config.personal.address.stateCountry}
               </p>
+            
             </div>
           </motion.div>
         </div>
