@@ -1,11 +1,10 @@
 "use client";
 import Config from "@config";
 
-import Link from "next/link";
 import Image from "next/image";
 import DesktopNavigation from "./desktop-nav";
 import MobileNavigation from "./mobile-nav";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { useState } from "react";
 
 const Navigation = ({
@@ -16,7 +15,8 @@ const Navigation = ({
   hasNavLinks?: boolean;
 }) => {
   const router = useRouter();
-  const [active, setActive] = useState<string>("");
+  const pathname = usePathname()
+  const [active, setActive] = useState<string>(pathname);
 
   return (
     <nav
@@ -25,7 +25,7 @@ const Navigation = ({
       } z-50 w-full flex items-center py-4 top-0 fixed`}
     >
       <div className="container h-fit justify-between items-center inline-flex">
-        <Link href={"/"} className="relative flex items-center gap-4">
+        <div className="relative flex items-center gap-4 cursor-pointer"  onClick={() => router.replace("/")}>
           <Image
             src={Config.logoLowDef}
             alt="TDJ Logo"
@@ -39,7 +39,7 @@ const Navigation = ({
           <p className="sm:hidden font-bold cursor-pointer text-lg tracking-wide pink-text-gradient drop-shadow-md">
             TDJ
           </p>
-        </Link>
+        </div>
 
         {hasNavLinks && (
           <ul className="list-none flex flex-row gap-10 max-nav:hidden">

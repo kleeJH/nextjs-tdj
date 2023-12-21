@@ -4,14 +4,19 @@ import Config from "@config";
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Compass } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 import BackgroundGrid from "@components/basic/GridBackground";
 import TiltCard from "@components/basic/TiltCard";
+import ShinyButton from "@components/basic/ShinyButton";
 
 import { styles } from "@styles/sharedStyles";
 import "./Hero.css";
 
 const Hero = () => {
+  const router = useRouter();
+
   const cards = [
     {
       icon: Config.hero.picture1,
@@ -58,7 +63,6 @@ const Hero = () => {
   ];
   return (
     <div className="container relative min-h-[calc(90vh)] max-nav:pt-16 overflow-hidden">
-
       <div className="absolute inset-10 -z-30 overflow-hidden rounded-full opacity-70 nav:hidden">
         <BackgroundGrid />
       </div>
@@ -89,6 +93,7 @@ const Hero = () => {
             <div className="flex flex-col justify-center items-center">
               <h1 className={`${styles.heroHeadText} stretch`}>Tadika</h1>
               <h1 className={`${styles.heroHeadText}`}>Desa Jaya</h1>
+              <h1 className={`${styles.heroHeadYearText}`}>Since 1974</h1>
             </div>
           </div>
           <p
@@ -98,8 +103,24 @@ const Hero = () => {
             A place where little explorers blossom! Every child&apos;s adventure
             begins here.
           </p>
+          <motion.div
+            whileHover={{
+              scale: [1, 1.1, 1],
+              transition: { duration: 1, repeat: 2 },
+            }}
+            whileTap={{
+              scale: 0.8,
+            }}
+          >
+            <ShinyButton
+              buttonText="Start Exploring!"
+              callbackFunc={() => {
+                router.replace("/#about");
+              }}
+              icon={<Compass aria-hidden="true" className="h-4 w-4" />}
+            />
+          </motion.div>
         </div>
-        {/* <div className="relative hidden nav:flex nav:flex-row justify-center items-center overflow-visible h-[600px] w-full"> */}
 
         <div className="relative hidden sm:flex sm:flex-row justify-center items-center overflow-visible h-[500px] nav:h-[600px] w-full">
           <div className="hidden nav:flex absolute -inset-40 top-1/2 -z-30 -translate-y-1/2 translate-x-[-30px] overflow-hidden rounded-full">
@@ -129,10 +150,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-{
-  /* <motion.div
-  animate={{ rotate: 180 }}
-  transition={{ repeat: Infinity, duration: 2 }}
-/> */
-}

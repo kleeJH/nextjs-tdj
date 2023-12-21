@@ -45,7 +45,7 @@ export default function NotFound({
           onClick={() => {
             router.replace("/");
           }}
-          className="square-button pink-text-gradient font-mono text-base font-semibold"
+          className="square-button font-mono text-base font-semibold"
         >
           Return to Home Page
         </motion.div>

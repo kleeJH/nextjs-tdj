@@ -4,9 +4,11 @@ const styles = {
   padding: "sm:px-16 px-6 sm:py-16 py-10",
 
   heroWelcomeText:
-    "font-bold purple-blue-text-gradient lg:text-[50px] md:text-[50px] sm:text-[50px] text-[35px] drop-shadow-md whitespace-nowrap",
+    "font-bold purple-blue-text-gradient sm:text-[50px] text-[35px] drop-shadow-md whitespace-nowrap",
   heroHeadText:
-    "font-black pink-text-gradient lg:text-[50px] md:text-[50px] sm:text-[50px] text-[35px] drop-shadow-md whitespace-nowrap",
+    "font-black pink-text-gradient sm:text-[50px] text-[35px] drop-shadow-md whitespace-nowrap",
+  heroHeadYearText:
+    "font-medium pink-text-gradient sm:text-[25px] text-[15px] drop-shadow-md whitespace-nowrap",
   heroSubText:
     "text-textDefault font-medium sm:text-[18px] xs:text-[15px] text-[15px] leading-8",
 

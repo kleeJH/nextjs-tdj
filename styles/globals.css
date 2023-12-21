@@ -26,6 +26,7 @@ li {
 
     --primary: #d33a5e;
     --secondary: #ffb8c8;
+    --tertiary: #fcfcfd;
     --accent: #ff6f8b;
     --drop-shadow-color: rgba(9, 8, 13, 0.25);
 
@@ -51,6 +52,7 @@ li {
 
     --primary: #c32c50;
     --secondary: #ffb8c8;
+    --tertiary: #262626;
     --accent: #ff6f8b;
     --drop-shadow-color: rgba(255, 255, 255, 0.2);
 
@@ -259,7 +261,7 @@ li {
 
 /* Square Buttons */
 .square-button {
-  @apply rounded-lg p-2 duration-300 bg-foreground hover:bg-accent border-solid border-[1px] border-accent select-none focus:outline-none focus-visible:ring-2 shadow shadow-accent cursor-pointer text-textDefault;
+  @apply rounded-lg p-2 duration-300 bg-foreground hover:bg-accent border-solid border-[1px] border-accent select-none focus:outline-none focus-visible:ring-2 shadow shadow-accent cursor-pointer;
 }
 
 /* Border gradient animations */

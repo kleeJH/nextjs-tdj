@@ -30,7 +30,7 @@ const Programme = () => {
         <h4
           className={`flex items-center ${styles.collapseItemTitleText} hover:text-textDefault`}
         >
-          List of activities
+          We Offer
         </h4>
       ),
       children: (

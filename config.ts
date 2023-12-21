@@ -37,7 +37,7 @@ const Config: {
   logoHighDef: HighDefLogo,
   personal: {
     address: {
-      street: "Lot 8 & 10, Jalan 34,",
+      street: "Lot 8, Jalan 34,",
       residential: "Taman Desa Jaya,",
       postalTown: "52100 Kuala Lumpur,",
       stateCountry: " Wilayah Persekutuan, Malaysia",
