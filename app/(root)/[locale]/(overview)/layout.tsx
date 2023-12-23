@@ -1,6 +1,6 @@
 import React from "react";
 
-import ScrollToTopButton from "@components/basic/ScrollToTopButton"
+import ScrollToTopButton from "@components/basic/ScrollToTopButton";
 import Navigation from "@components/Navigation";
 import Footer from "@components/Footer";
 

@@ -86,18 +86,18 @@ const Config: {
   footer: {
     "Footer.Top.Category.quickLinks": {
       "Footer.Top.SubCategory.aboutUs": {
-        href: "/",
+        href: "/#about",
       },
       "Footer.Top.SubCategory.ourProgrammes": {
-        href: "/",
+        href: "/#programme",
       },
     },
     "Footer.Top.Category.connect": {
       "Footer.Top.SubCategory.contactUs": {
-        href: "/",
+        href: "/#contact",
       },
       "Footer.Top.SubCategory.career": {
-        href: "/",
+        href: "/careers",
       },
     },
   },

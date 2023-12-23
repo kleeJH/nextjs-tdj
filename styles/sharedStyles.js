@@ -4,7 +4,7 @@ const styles = {
   padding: "sm:px-16 px-6 sm:py-16 py-10",
 
   heroWelcomeText:
-    "font-bold purple-blue-text-gradient sm:text-[50px] text-[35px] drop-shadow-md whitespace-nowrap",
+    "font-bold text-accent sm:text-[50px] text-[35px] drop-shadow-md whitespace-nowrap",
   heroHeadText:
     "font-black pink-text-gradient sm:text-[50px] text-[35px] drop-shadow-md whitespace-nowrap",
   heroHeadYearText:
@@ -24,7 +24,7 @@ const styles = {
     "font-inter text-textDefault text-[17px] max-w-3xl leading-[30px]",
 
   withinSectionAddressHeadText:
-    "purple-blue-text-gradient font-satoshi font-bold lg:text-[50px] md:text-[40px] sm:text-[40px] xs:text-[30px] text-[20px] drop-shadow-md",
+    "text-accent font-satoshi font-bold lg:text-[50px] md:text-[40px] sm:text-[40px] xs:text-[30px] text-[20px] drop-shadow-md",
   withinSectionAddressText:
     "font-ooohBaby lg:text-[20px] md:text-[16px] text-[20px] font-semibold",
 

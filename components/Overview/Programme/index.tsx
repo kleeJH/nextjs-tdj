@@ -1,7 +1,7 @@
 import React from "react";
 import { Collapse, CollapseProps } from "antd";
 import SectionWrapper from "@components/basic/SectionWrapper";
-import InteractiveCard from "@components/basic/InteractiveCard";
+import { InteractiveCard } from "@components/basic/InteractiveCard";
 
 import { styles } from "@styles/sharedStyles";
 import "./Programme.css";
@@ -134,16 +134,14 @@ const Programme = () => {
           </div>
 
           <div className={`${styles.withinSectionSubText} flex flex-col gap-2`}>
-          <div className="px-4 py-1 border border-accent text-center">
-              <span className={`blue-pink-text-gradient font-bold`}>
-                Time
-              </span>
+            <div className="px-4 py-1 border border-accent text-center">
+              <span className={`blue-pink-text-gradient font-bold`}>Time</span>
             </div>
             <span>{prog.time}</span>
           </div>
 
           <div className={`${styles.withinSectionSubText} flex flex-col gap-2`}>
-          <div className="px-4 py-1 border border-accent text-center">
+            <div className="px-4 py-1 border border-accent text-center">
               <span className={`blue-pink-text-gradient font-bold`}>
                 Age Group
               </span>

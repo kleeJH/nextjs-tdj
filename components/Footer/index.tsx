@@ -73,15 +73,15 @@ const Footer = ({ hidden = false }: { hidden?: boolean }) => {
           {/* Footer Below */}
           <div className="flex flex-col gap-4">
             <div className="flex flex-row justify-between items-center gap-2 max-sm:flex-col max-sm:items-start">
-              <p className="font-inter pink-text-gradient">
+              <Link href={"https://github.com/kleeJH"} target="_block" className="font-inter pink-text-gradient cursor-pointer" >
                 {t("Footer.Bottom.madeWith")}
-              </p>
+              </Link>
               <div>
                 <div className="flex flex-row gap-5 text-sm font-inter justify-center items-center h-10">
-                  <p className="font-satoshi text-sm font-semibold max-sm:hidden ">
+                  <p className="font-satoshi text-sm font-semibold">
                     {t("Footer.Bottom.socialMedia")}
                   </p>
-                  <span className="vertical max-sm:!h-5 max-sm:hidden" />
+                  <span className="vertical max-sm:!h-5" />
                   <Link
                     href={Config.socials["facebook"].href}
                     target="_block"
@@ -103,6 +103,14 @@ const Footer = ({ hidden = false }: { hidden?: boolean }) => {
                   className="footer-link-text text-center"
                 >
                   <p>{t("Footer.Bottom.privacy")}</p>
+                </Link>
+                <span className="vertical max-sm:!h-5 max-sm:hidden" />
+                <Link
+                  href={"https://icons8.com"}
+                  target="_block"
+                  className="footer-link-text text-center"
+                >
+                  <p>Icons by Icons8</p>
                 </Link>
               </div>
               <p className="text-right font-inter text-gray-500 text-sm max-sm:text-left">
