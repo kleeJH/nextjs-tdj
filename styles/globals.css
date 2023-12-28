@@ -30,17 +30,14 @@ li {
     --accent: #ff6f8b;
     --drop-shadow-color: rgba(9, 8, 13, 0.25);
 
-    /* --clr-1: #052b2f;
-    --clr-2: #073438;
-    --clr-3: #0e4b50;
-    --clr-4: #2d8f85;
-    --clr-5: #637c54; */
-
     --clr-1: #ff6f8b;
     --clr-2: #ff8b6f;
     --clr-3: #ffbb6f;
     --clr-4: #ff6fbb;
     --clr-5: #d46fff;
+
+    --scroll-to-top-color: rgba(255, 111, 139, 0.3);
+    --star-drop-shadow: rgba(255, 187, 111, 0.3);
   }
   .dark {
     --text-default: #f3f2f7;
@@ -55,12 +52,7 @@ li {
     --tertiary: #262626;
     --accent: #ff6f8b;
     --drop-shadow-color: rgba(255, 255, 255, 0.2);
-
-    --clr-1: #ff6f8b;
-    --clr-2: #ff8b6f;
-    --clr-3: #ffbb6f;
-    --clr-4: #ff6fbb;
-    --clr-5: #d46fff;
+    --star-drop-shadow: rgba(255, 187, 111, 0.3);
   }
 }
 
@@ -332,47 +324,4 @@ li {
     hsla(0, 0%, 100%, 0.3)
   ) !important;
   animation: rotation 5s linear infinite reverse;
-}
-
-/* Envelope */
-.envelope {
-  background: repeating-linear-gradient(
-    -45deg,
-    rgb(198, 40, 40) 0,
-    rgb(198, 40, 40) 5%,
-    rgb(255, 255, 255) 5%,
-    rgb(255, 255, 255) 10%,
-    rgb(21, 101, 192) 10%,
-    rgb(21, 101, 192) 15%,
-    rgb(255, 255, 255) 15%,
-    rgb(255, 255, 255) 20%,
-    rgb(198, 40, 40) 20%
-  );
-  background-size: 200% 100%;
-}
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 100% 0;
-  }
-}
-
-.envelope:hover {
-  animation: gradientAnimation 12s linear infinite reverse;
-  background: repeating-linear-gradient(
-    -45deg,
-    rgb(198, 40, 40) 0,
-    rgb(198, 40, 40) 5%,
-    rgb(255, 255, 255) 5%,
-    rgb(255, 255, 255) 10%,
-    rgb(21, 101, 192) 10%,
-    rgb(21, 101, 192) 15%,
-    rgb(255, 255, 255) 15%,
-    rgb(255, 255, 255) 20%,
-    rgb(198, 40, 40) 20%
-  );
-  background-size: 200% 100%;
 }

@@ -9,6 +9,7 @@ import { notification } from "antd";
 import SectionWrapper from "@components/basic/SectionWrapper";
 
 import { styles } from "@styles/sharedStyles";
+import "./Location.css"
 
 const Location = () => {
   const [api, contextHolder] = notification.useNotification();

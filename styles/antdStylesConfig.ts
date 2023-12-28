@@ -20,7 +20,7 @@ export const AntdTheme: ThemeConfig = {
     },
     FloatButton: {
       colorBgElevated: "var(--tertiary)",
-      colorFillContent: "var(--accent)"
+      colorFillContent: "var(--scroll-to-top-color)"
     }
   }
 };

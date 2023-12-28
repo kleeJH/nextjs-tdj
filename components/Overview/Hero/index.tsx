@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Compass } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { ArrowDown } from "lucide-react";
 
 import BackgroundGrid from "@components/basic/GridBackground";
 import TiltCard from "@components/basic/TiltCard";
@@ -143,6 +144,17 @@ const Hero = () => {
               <TiltCard index={index} icon={card.icon} />
             </motion.div>
           ))}
+        </div>
+      </div>
+
+      <div className="pt-[50px] flex justify-center hover:scale-125 transition ease-in-out duration-500">
+        <div
+          className="p-5 border-2 border-accent rounded-full animate-bounce cursor-pointer"
+          onClick={() => {
+            router.replace("/#about");
+          }}
+        >
+          <ArrowDown aria-hidden="true" className="h-8 w-8 text-primary" />
         </div>
       </div>
     </div>

@@ -11,10 +11,8 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      animation: {
+        float: "float 4s linear infinite",
       },
       fontFamily: {
         satoshi: ["Satoshi", "sans-serif"],
@@ -34,10 +32,24 @@ const config: Config = {
       },
       dropShadow: {
         sm: "0 1px 1px var(--drop-shadow-color)",
-        md: ["0 4px 3px var(--drop-shadow-color)", "0 2px 2px var(--drop-shadow-color)"],
-        lg: ["0 10px 8px var(--drop-shadow-color)", "0 4px 3px var(--drop-shadow-color)"],
-        xl: ["0 20px 13px var(--drop-shadow-color)", "0 8px 5px var(--drop-shadow-color)"],
+        md: [
+          "0 4px 3px var(--drop-shadow-color)",
+          "0 2px 2px var(--drop-shadow-color)",
+        ],
+        lg: [
+          "0 10px 8px var(--drop-shadow-color)",
+          "0 4px 3px var(--drop-shadow-color)",
+        ],
+        xl: [
+          "0 20px 13px var(--drop-shadow-color)",
+          "0 8px 5px var(--drop-shadow-color)",
+        ],
         "2xl": "0 25px 25px var(--drop-shadow-color)",
+
+        star: [
+          "0 4px 3px var(--star-drop-shadow)",
+          "0 2px 2px var(--star-drop-shadow)",
+        ],
       },
       boxShadow: {
         card: "0px 35px 120px -15px  var(--drop-shadow-color)",

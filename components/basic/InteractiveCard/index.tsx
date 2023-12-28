@@ -8,8 +8,10 @@ import {
   useMotionValue,
   type MotionStyle,
   type MotionValue,
+  type Variants,
 } from "framer-motion";
 import { useIsMobile } from "@utils/useIsMobile";
+import Image from "next/image";
 
 import "./InteractiveCard.css";
 
@@ -19,21 +21,25 @@ type WrapperStyle = MotionStyle & {
 };
 
 interface CardProps {
-  title?: string | undefined;
+  className?: string;
   description?: string | undefined;
   hasHeading?: boolean;
-  width?: string;
   height?: string;
+  title?: string | undefined;
+  variants?: Variants;
+  width?: string;
 }
 
 // Ref: https://github.com/typehero/typehero/blob/main/apps/web/src/app/%5Blocale%5D/_components/feature-card.tsx
 const InteractiveCard = ({
-  title = undefined,
+  className = "",
+  children = <></>,
   description = undefined,
   hasHeading = true,
-  width = "w-fit",
   height = "w-fit",
-  children = <></>,
+  title = undefined,
+  variants = undefined,
+  width = "w-fit",
 }: CardProps & {
   children?: React.ReactNode;
 }) => {
@@ -52,14 +58,16 @@ const InteractiveCard = ({
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
   };
+
   useEffect(() => {
     setMounted(true);
   }, []);
 
   return (
     <motion.div
-      className="animated-feature-cards relative w-fit h-fit drop-shadow-md"
+      className={`animated-feature-cards relative w-fit h-fit drop-shadow-md ${className}`}
       onMouseMove={handleMouseMovement}
+      variants={variants}
       style={
         {
           "--x": useMotionTemplate`${mouseX}px`,
@@ -88,34 +96,41 @@ const InteractiveCard = ({
   );
 };
 
-const PhoneCard = () => {
-  return (
-    <div>
-      <motion.img />
-      <InteractiveCard
-        title={"Phone"}
-        description={"Call Us!"}
-        width="w-[300px]"
-        height="h-[300px]"
-      ></InteractiveCard>
-    </div>
-  );
-};
+interface ContactCardProps {
+  title: string;
+  description: string;
+  icon: string;
+}
 
-const WhatsAppCard = () => {
+const ContactCard = ({ title, description, icon }: ContactCardProps) => {
+  function getRandomInt(min: number, max: number) {
+    return Math.max(min, Math.floor(Math.random() * max));
+  }
+
   return (
-    <InteractiveCard title={"WhatsApp"} description={"Call Us!"}>
-      <></>
+    <InteractiveCard
+      title={title}
+      description={description}
+      width="w-[300px]"
+      height="h-[300px]"
+      className="group"
+    >
+      {Array.from(Array(30).keys()).map((key) => (
+        <Image
+          key={key}
+          src={icon}
+          alt="Icon"
+          style={{
+            left: getRandomInt(20, 250),
+            animationDelay: `${getRandomInt(200, 5000)}ms`,
+          }}
+          className={`opacity-0 absolute bottom-[0px] group-hover:block group-hover:animate-float transition max-sm:animate-float`}
+          width={getRandomInt(20, 45)}
+          height={20}
+        />
+      ))}
     </InteractiveCard>
   );
 };
 
-const FacebookCard = () => {
-  return (
-    <InteractiveCard title={"Facebook"} description={"Call Us!"}>
-      <></>
-    </InteractiveCard>
-  );
-};
-
-export { InteractiveCard, PhoneCard, WhatsAppCard, FacebookCard };
+export { InteractiveCard, ContactCard };
