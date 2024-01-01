@@ -2,10 +2,10 @@
 .shiny-button {
   background: linear-gradient(
     var(--gradient-angle),
-    hsla(211, 60%, 48%, 0.7),
-    hsla(211, 60%, 48%, 0.3),
-    #3178c6,
-    hsla(211, 60%, 48%, 0.5)
+    hsla(348, 100%, 72%, 0.7),
+    hsla(348, 100%, 72%, 0.3),
+    #ff6f8b,
+    hsla(348, 100%, 72%, 0.5)
   ) !important;
   animation: rotation 5s linear infinite reverse;
 }

@@ -8,7 +8,6 @@ import { useRouter, usePathname } from "next/navigation";
 
 import DesktopNavigation from "./desktop-nav";
 import MobileNavigation from "./mobile-nav";
-import ScrollProgress from "@components/basic/ScrollProgress";
 
 const Navigation = ({
   bgType = "default",
@@ -78,7 +77,6 @@ const Navigation = ({
             />
           )}
         </div>
-        <ScrollProgress />
       </nav>
     </>
   );

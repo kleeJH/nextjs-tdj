@@ -107,7 +107,7 @@ const Hero = () => {
           <motion.div
             whileHover={{
               scale: [1, 1.1, 1],
-              transition: { duration: 1, repeat: 2 },
+              transition: { duration: 1, repeat: 1 },
             }}
             whileTap={{
               scale: 0.8,
@@ -147,7 +147,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="pt-[50px] flex justify-center hover:scale-125 transition ease-in-out duration-500">
+      <div className="pt-[50px] flex flex-row justify-center">
         <div
           className="p-5 border-2 border-accent rounded-full animate-bounce cursor-pointer"
           onClick={() => {

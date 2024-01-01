@@ -1,6 +1,5 @@
 import React from "react";
 import { useTranslations } from "next-intl";
-import { Facebook } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,7 +10,9 @@ import "./Footer.css";
 const Footer = ({ hidden = false }: { hidden?: boolean }) => {
   const t = useTranslations();
   return (
-    <footer className={`w-full bottom-0 bg-background py-6 ${hidden && "hidden"}`}>
+    <footer
+      className={`w-full bottom-0 bg-background py-6 ${hidden && "hidden"}`}
+    >
       <div className="container">
         <div className="flex flex-col">
           <div className="flex flex-row justify-between items-center gap-8 max-sm:flex-col max-sm:items-start max-sm:justfiy-start">
@@ -73,7 +74,11 @@ const Footer = ({ hidden = false }: { hidden?: boolean }) => {
           {/* Footer Below */}
           <div className="flex flex-col gap-4">
             <div className="flex flex-row justify-between items-center gap-2 max-sm:flex-col max-sm:items-start">
-              <Link href={"https://github.com/kleeJH"} target="_block" className="font-inter pink-text-gradient cursor-pointer" >
+              <Link
+                href={"https://github.com/kleeJH"}
+                target="_block"
+                className="font-inter pink-text-gradient cursor-pointer"
+              >
                 {t("Footer.Bottom.madeWith")}
               </Link>
               <div>
@@ -83,11 +88,32 @@ const Footer = ({ hidden = false }: { hidden?: boolean }) => {
                   </p>
                   <span className="vertical max-sm:!h-5" />
                   <Link
+                    href={Config.socials["whatsapp"].href}
+                    target="_block"
+                    className="square-button"
+                  >
+                    <Image
+                      src={"/assets/icons/whatsapp.svg"}
+                      alt="Whatsapp Logo"
+                      aria-hidden="true"
+                      className="h-5 w-5 fill-white"
+                      width={30}
+                      height={30}
+                    />
+                  </Link>
+                  <Link
                     href={Config.socials["facebook"].href}
                     target="_block"
                     className="square-button"
                   >
-                    <Facebook aria-hidden="true" className="h-5 w-5" />
+                    <Image
+                      src={"/assets/icons/facebook.svg"}
+                      alt="Facebook Logo"
+                      aria-hidden="true"
+                      className="h-5 w-5 fill-white"
+                      width={30}
+                      height={30}
+                    />
                   </Link>
                 </div>
               </div>

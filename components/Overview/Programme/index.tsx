@@ -177,9 +177,10 @@ const Programme = () => {
 
       <h2 className={styles.withinSectionHeadText}>Half Day Programme</h2>
       <p className={`${styles.withinSectionSubText} mt-3`}>
-        Some information about half day. Depending on the situation, student
-        need to attend their respective session. Do note that there are limited
-        spaces for either sessions. <br />
+        Our half day programme is for students from age 3+ to 6. Our experienced
+        educators provide a nurturing and stimulating environment that fosters
+        the growth and development of young children.
+        <br />
         <br />
         There are two sessions available:
       </p>
@@ -238,8 +239,10 @@ const Programme = () => {
         Full Day and Enrichment Programmes
       </h2>
       <p className={`${styles.withinSectionSubText} mt-3`}>
-        Our schoool also provides programmes that can enrich your child&apos;s
-        education and experience.
+        We offer full day services to our preschool children. Our KIP service
+        includes homework coaching, tuition classes, character building,
+        conversations, games and other activities. We also have speech and drama
+        classes for children who wish to develop their talents in acting.
       </p>
       <p className={`${styles.withinSectionSubText} mt-10`}>
         Below are the programmes that we offer:

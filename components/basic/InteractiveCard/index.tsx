@@ -23,9 +23,11 @@ type WrapperStyle = MotionStyle & {
 interface CardProps {
   className?: string;
   description?: string | undefined;
+  descriptionClassName?: string;
   hasHeading?: boolean;
   height?: string;
   title?: string | undefined;
+  titleClassName?: string;
   variants?: Variants;
   width?: string;
 }
@@ -35,9 +37,11 @@ const InteractiveCard = ({
   className = "",
   children = <></>,
   description = undefined,
+  descriptionClassName = "",
   hasHeading = true,
   height = "w-fit",
   title = undefined,
+  titleClassName = "",
   variants = undefined,
   width = "w-fit",
 }: CardProps & {
@@ -76,15 +80,19 @@ const InteractiveCard = ({
       }
     >
       <div
-        className={`group relative border border-textLink ${width} ${height} overflow-hidden rounded-3xl bg-gradient-to-b from-neutral-50/90 to-neutral-100/90 transition duration-300 dark:from-neutral-950/90 dark:to-neutral-800/90 md:hover:border-transparent`}
+        className={`border border-textLink ${width} ${height} overflow-hidden rounded-3xl bg-gradient-to-b from-neutral-50/90 to-neutral-100/90 transition duration-300 dark:from-neutral-950/90 dark:to-neutral-800/90 md:hover:border-transparent`}
       >
         <div className="m-6 w-full sm:m-10">
           {hasHeading && (
             <div className="flex w-5/6 flex-col gap-3 sm:w-4/6 md:w-4/5 xl:w-4/6">
-              <h2 className="text-xl font-bold text-textDefault tracking-tight md:text-xl">
+              <h2
+                className={`text-xl font-bold text-textDefault tracking-tight md:text-xl ${titleClassName}`}
+              >
                 {title}
               </h2>
-              <p className="text-sm leading-5 text-zinc-600 dark:text-zinc-400 sm:text-base sm:leading-7 w-full">
+              <p
+                className={`text-sm leading-5 text-zinc-600 dark:text-zinc-400 sm:text-base sm:leading-7 w-full ${descriptionClassName}`}
+              >
                 {description}
               </p>
             </div>
@@ -110,10 +118,12 @@ const ContactCard = ({ title, description, icon }: ContactCardProps) => {
   return (
     <InteractiveCard
       title={title}
+      titleClassName="blue-pink-text-gradient w-fit !text-3xl"
       description={description}
+      descriptionClassName="group-hover:text-accent !font-semibold !text-md"
       width="w-[300px]"
       height="h-[300px]"
-      className="group"
+      className="group drop-shadow-lg"
     >
       {Array.from(Array(30).keys()).map((key) => (
         <Image

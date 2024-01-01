@@ -1,5 +1,9 @@
+"use client"
+
 import { useState } from "react";
 import { Modal } from "antd";
+
+import ShinyButton from "../ShinyButton";
 
 const DownloadPdfButton = () => {
   const [open, setOpen] = useState(false);

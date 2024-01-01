@@ -1,4 +1,4 @@
-import { ThemeConfig } from 'antd';
+import { ThemeConfig } from "antd";
 
 export const AntdTheme: ThemeConfig = {
   token: {
@@ -9,18 +9,22 @@ export const AntdTheme: ThemeConfig = {
     colorIconHover: "var(--accent)",
     colorText: "var(--text-default)",
     colorSplit: "var(--text-default)",
-    boxShadowSecondary: "0 4px 4px var(--drop-shadow-color), 0 2px 3px var(--drop-shadow-color)",
+    boxShadowSecondary:
+      "0 4px 4px var(--drop-shadow-color), 0 2px 3px var(--drop-shadow-color)",
   },
   components: {
     Layout: {
       footerBg: "var(--background)",
     },
+    Carousel: {
+      colorBgContainer: "var(--accent)",
+    },
     Collapse: {
-      contentBg: "var(--background)"
+      contentBg: "var(--background)",
     },
     FloatButton: {
       colorBgElevated: "var(--tertiary)",
-      colorFillContent: "var(--scroll-to-top-color)"
-    }
-  }
+      colorFillContent: "var(--scroll-to-top-color)",
+    },
+  },
 };
