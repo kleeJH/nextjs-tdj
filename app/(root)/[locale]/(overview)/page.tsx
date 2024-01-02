@@ -12,12 +12,12 @@ const OverviewPage = () => {
   return (
     <div className="relative w-full pt-20">
       <Hero />
-      <Gallery />
       <About />
       <Programme />
       <Location />
       <Admission />
       <Contact />
+      <Gallery />
     </div>
   );
 };

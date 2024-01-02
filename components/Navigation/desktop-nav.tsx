@@ -9,7 +9,7 @@ const  DesktopNavigation = ({
   return (
     <div className={`flex gap-10 items-center ${hasNavLinks ? "max-nav:hidden" : "" }`}>
       <div className="flex gap-3 md:gap-5">
-        <LocaleSwitch />
+        {/* <LocaleSwitch /> */}
         <ThemeSwitch />
       </div>
     </div>

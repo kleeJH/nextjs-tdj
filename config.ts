@@ -144,9 +144,9 @@ const Config: {
       "Footer.Top.SubCategory.contactUs": {
         href: "/#contact",
       },
-      "Footer.Top.SubCategory.career": {
-        href: "/careers",
-      },
+      // "Footer.Top.SubCategory.career": {
+      //   href: "/careers",
+      // },
     },
   },
 };

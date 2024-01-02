@@ -50,7 +50,7 @@ const MobileNavigation = ({
         width={250}
         extra={
           <div className="flex justify-end items-center gap-3 md:gap-5">
-            <LocaleSwitch />
+            {/* <LocaleSwitch /> */}
             <ThemeSwitch />
           </div>
         }
