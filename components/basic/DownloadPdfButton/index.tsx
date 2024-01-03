@@ -3,19 +3,35 @@
 import { useState } from "react";
 import { Modal } from "antd";
 import { AlertCircle, Download } from "lucide-react";
-import Link from "next/link";
 
 import ShinyButton from "../ShinyButton";
 
 const DownloadPdfButton = () => {
   const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  // Function to trigger file download
+  const downloadFile = async () => {
+    // Create a link element and trigger a download
+    const link = document.createElement("a");
+    link.href = "/assets/files/TDJ2023EnrolmentForm.pdf";
+    link.download = "TDJ 2023 Enrolment Form.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   const showModal = () => {
     setOpen(true);
   };
 
   const handleConfirm = () => {
-    setOpen(false);
+    setLoading(true);
+    downloadFile();
+    setTimeout(() => {
+      setOpen(false);
+      setLoading(false);
+    }, 1500);
   };
 
   const handleCancel = () => {
@@ -24,14 +40,6 @@ const DownloadPdfButton = () => {
 
   return (
     <>
-      {/* <Link
-        href={""}
-        download="Example-PDF-document"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <ShinyButton buttonText="Download Enrolment Form" />
-      </Link> */}
       <ShinyButton
         buttonText="Download Enrolment Form"
         icon={<Download aria-hidden="true" className="h-4 w-4" />}
@@ -50,8 +58,9 @@ const DownloadPdfButton = () => {
         onOk={handleConfirm}
         okType="default"
         okText="Confirm"
+        confirmLoading={loading}
         okButtonProps={{
-          style: { backgroundColor: "hsla(96, 65%, 63%, 0.7)"  },
+          style: { backgroundColor: "hsla(96, 65%, 63%, 0.7)" },
         }}
         onCancel={handleCancel}
       >
