@@ -34,7 +34,7 @@ const Hero = () => {
       },
     },
     {
-      icon: Config.hero.picture1,
+      icon: Config.hero.picture2,
       motionProps: {
         initial: {
           y: 60,
@@ -48,7 +48,7 @@ const Hero = () => {
       },
     },
     {
-      icon: Config.hero.picture1,
+      icon: Config.hero.picture3,
       motionProps: {
         initial: {
           y: -40,
@@ -64,11 +64,12 @@ const Hero = () => {
   ];
   return (
     <div className="container relative min-h-[calc(90vh)] max-nav:pt-16 overflow-hidden">
+       <span className="relative h-[calc(30vh)]" />
       <div className="absolute inset-10 -z-30 overflow-hidden rounded-full opacity-70 nav:hidden">
         <BackgroundGrid />
       </div>
 
-      <div className="relative grid justify-center items-center grid-cols-1 nav:grid-cols-2 gap-10 nav:gap-24">
+      <div className="relative grid justify-center items-center grid-cols-1 nav:grid-cols-2 gap-10 nav:gap-24 3xl:pt-[calc(10vh)]">
         <div className="flex flex-col gap-5 justify-center items-center nav:items-start">
           <h1 className={`${styles.heroWelcomeText}`}>Welcome!</h1>
           <div className="flex w-fit flex-row justify-center items-center gap-5 nav:pr-5">

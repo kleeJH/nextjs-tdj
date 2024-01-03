@@ -3,7 +3,7 @@ import { ThemeConfig } from "antd";
 export const AntdTheme: ThemeConfig = {
   token: {
     colorBgElevated: "var(--background)",
-    // colorFillContent: "var(--primary)",
+    colorFillContent: "var(--primary)",
     colorPrimary: "var(--primary)",
     colorIcon: "var(--text-default)",
     colorIconHover: "var(--accent)",
@@ -13,8 +13,9 @@ export const AntdTheme: ThemeConfig = {
       "0 4px 4px var(--drop-shadow-color), 0 2px 3px var(--drop-shadow-color)",
   },
   components: {
-    Layout: {
-      footerBg: "var(--background)",
+    Button: {
+      defaultBorderColor: "var(--antd-button-hover)",
+      colorPrimaryHover: "var(--text-default)",
     },
     Carousel: {
       colorBgContainer: "var(--accent)",
@@ -25,6 +26,12 @@ export const AntdTheme: ThemeConfig = {
     FloatButton: {
       colorBgElevated: "var(--tertiary)",
       colorFillContent: "var(--scroll-to-top-color)",
+    },
+    Layout: {
+      footerBg: "var(--background)",
+    },
+    Modal: {
+      colorText: "var(--text-default)",
     },
   },
 };

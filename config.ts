@@ -6,7 +6,10 @@ import {
 } from "next/dist/shared/lib/get-img-props";
 import LowDefLogo from "./public/assets/images/logo.png";
 import HighDefLogo from "./public/assets/images/logo-big.png";
-import TiltCardPic1 from "./public/assets/images/card-malaysiaDay.jpg";
+import TiltCardPic1 from "./public/assets/images/card-sportsDay.jpg";
+import TiltCardPic2 from "./public/assets/images/card-malaysiaDay.jpg";
+import TiltCardPic3 from "./public/assets/images/card-plants.jpg";
+
 
 const Config: {
   logoLowDef: StaticImageData;
@@ -29,6 +32,7 @@ const Config: {
   hero: {
     picture1: StaticImport;
     picture2: StaticImport;
+    picture3: StaticImport;
   };
   navigationLinks: { title: string; href: string }[];
   footer: {
@@ -107,7 +111,8 @@ const Config: {
   ],
   hero: {
     picture1: TiltCardPic1,
-    picture2: TiltCardPic1,
+    picture2: TiltCardPic2,
+    picture3: TiltCardPic3,
   },
   navigationLinks: [
     {

@@ -94,24 +94,26 @@ const Programme = () => {
     {
       title: "Tuition",
       description:
-        "Provide support and guidance towards the English, Malay, Chinese and Mathematics subjects.",
+        "We offer tuition classes to children who need extra attention from our teachers. Our classes are designed to help children to improve their academic skills and prepare them for success in future studies. We offer various subjects including Bahasa Melayu, English, Chinese, and Mathematics.",
       time: "Weekdays from 12:30 p.m. to 2:30 p.m.",
-      ageGroup: "some age group",
+      ageGroup: "Age 3+ to 6 years old",
     },
     {
       title: "Kids Interactive Programme (KIP)",
-      description: "Provide homework guidance and tuition.",
+      description:
+        "We offer one-stop-solution service for working parents. KIP provides homework coaching, tuition classes for all subjects including 3 languages spelling, lunch, snack, and supervised playtime. Small group with our dedicated teachers. Cultivating positive learning attitude and character building.",
       time: "Weekdays from 8:00 a.m. to 5:30 p.m.",
-      ageGroup:
-        "Age from as young as 3 years old and up to primary school students",
+      ageGroup: "Age 3+ to 6 years old",
     },
     {
       title: "Speech and Drama class (optional)",
-      description: "drama stuff",
+      description:
+        "Speech and drama classes focus on the art of performance and expression. Children explore various aspects of theatrical arts, including singing, acting, and stage performance. Classes conducted by experienced teacher who teach at the international schools and preschools.",
       time: "Every Wednesday (4 times a month) with a duration of 1 hour each session",
-      ageGroup: "some age group",
+      ageGroup: "Age 3+ to 6 years old",
     },
   ];
+
   const fullDayCollapseItems: CollapseProps["items"] = fullDay.map(
     (prog, index) => ({
       key: index,

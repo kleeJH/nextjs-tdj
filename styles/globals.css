@@ -20,6 +20,7 @@ li {
     --text-default: #09080d;
     --text-link: #6b7280;
     --text-sectionSubText: #ffb8c8;
+    --antd-button-hover: #d9d9d9;
 
     --background: #fcfcfd;
     --foreground: #ffb8c8;
@@ -41,8 +42,8 @@ li {
   }
   .dark {
     --text-default: #f3f2f7;
-    --text-link: #6b7280;
     --text-sectionSubText: #6b7280;
+    --antd-button-hover: #6b7280;
 
     --background: #050816;
     --foreground: #262626;

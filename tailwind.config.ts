@@ -63,6 +63,7 @@ const config: Config = {
       },
       screens: {
         nav: "1080px",
+        "3xl": "1921px",
       },
     },
   },

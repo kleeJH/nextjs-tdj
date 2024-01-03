@@ -4,13 +4,13 @@ const styles = {
   padding: "sm:px-16 px-6 sm:py-16 py-10",
 
   heroWelcomeText:
-    "font-bold text-accent sm:text-[50px] text-[35px] drop-shadow-md whitespace-nowrap",
+    "font-bold text-accent 3xl:text-[70px] sm:text-[50px] text-[35px] drop-shadow-md whitespace-nowrap",
   heroHeadText:
-    "font-black pink-text-gradient sm:text-[50px] text-[35px] drop-shadow-md whitespace-nowrap",
+    "font-black pink-text-gradient 3xl:text-[70px] sm:text-[50px] text-[35px] drop-shadow-md whitespace-nowrap",
   heroHeadYearText:
-    "font-medium pink-text-gradient sm:text-[25px] text-[15px] drop-shadow-md whitespace-nowrap",
+    "font-medium pink-text-gradient 3xl:text-[45px] sm:text-[25px] text-[15px] drop-shadow-md whitespace-nowrap",
   heroSubText:
-    "text-textDefault font-medium sm:text-[18px] xs:text-[15px] text-[15px] leading-8",
+    "text-textDefault font-medium 3xl:text-[25px] 3xl:leading-18 sm:text-[20px] text-[15px]",
 
   sectionWrapper: "mb-10",
   sectionHeadText:

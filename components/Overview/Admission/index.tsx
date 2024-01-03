@@ -10,7 +10,7 @@ const Admission = () => {
       <p className={styles.sectionSubText}>FIND OUT MORE</p>
       <h2 className={styles.sectionHeadText}>Admission.</h2>
 
-      <p className={`${styles.withinSectionSubText} mt-3`}>
+      <p className={`${styles.withinSectionSubText} mt-3 mb-10`}>
         We are fostering a nurturing environment that encourages curiosity,
         creativity, and a love for learning. If you envision a vibrant and
         supportive educational journey for your child, we invite you to take the

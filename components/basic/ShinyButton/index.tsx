@@ -28,7 +28,7 @@ const ShinyButton = ({
     <motion.div
       className={`w-fit ${
         resolvedTheme === "light" ? "shiny-button" : "shiny-button-dark"
-      } ${buttonRounded} cursor-pointer p-[1.5px] shadow-md`}
+      } ${buttonRounded} cursor-pointer p-[1.5px] shadow-md select-none`}
       onClick={() => callbackFunc()}
     >
       <div
