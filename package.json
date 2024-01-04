@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@ant-design/cssinjs": "^1.18.1",
+    "@vercel/analytics": "^1.1.1",
+    "@vercel/speed-insights": "^1.0.2",
     "antd": "^5.12.1",
     "framer-motion": "^10.16.16",
     "language-icons": "^0.3.0",

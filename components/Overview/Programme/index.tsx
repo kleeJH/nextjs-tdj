@@ -82,7 +82,7 @@ const Programme = () => {
         "Three languages, communication and self-expression",
         "Reading and writing",
         "Advance Mathematics",
-        "Develop creativity in arts and critical thinking skills",
+        "Develop creativity in arts, songs and critical thinking skills",
         "Science and Coding",
         "Develop positive character, independence and build self-confidence",
         "Gross motor skills",

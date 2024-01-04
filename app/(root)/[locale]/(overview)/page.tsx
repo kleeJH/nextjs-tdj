@@ -14,8 +14,8 @@ const OverviewPage = () => {
       <Hero />
       <About />
       <Programme />
-      <Location />
       <Admission />
+      <Location />
       <Contact />
       <Gallery />
     </div>

@@ -10,7 +10,6 @@ import TiltCardPic1 from "./public/assets/images/card-sportsDay.jpg";
 import TiltCardPic2 from "./public/assets/images/card-malaysiaDay.jpg";
 import TiltCardPic3 from "./public/assets/images/card-plants.jpg";
 
-
 const Config: {
   logoLowDef: StaticImageData;
   logoHighDef: StaticImageData;
@@ -124,12 +123,12 @@ const Config: {
       href: "/#programme",
     },
     {
-      title: "Location",
-      href: "/#location",
-    },
-    {
       title: "Admission",
       href: "/#admission",
+    },
+    {
+      title: "Location",
+      href: "/#location",
     },
     {
       title: "Contact",

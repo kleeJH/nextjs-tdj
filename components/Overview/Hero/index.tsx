@@ -64,7 +64,7 @@ const Hero = () => {
   ];
   return (
     <div className="container relative min-h-[calc(90vh)] max-nav:pt-16 overflow-hidden">
-       <span className="relative h-[calc(30vh)]" />
+      <span className="relative h-[calc(30vh)]" />
       <div className="absolute inset-10 -z-30 overflow-hidden rounded-full opacity-70 nav:hidden">
         <BackgroundGrid />
       </div>
@@ -101,9 +101,8 @@ const Hero = () => {
           <p
             className={`${styles.heroSubText} nav:text-left text-center max-nav:px-20 max-sm:w-[315px] max-sm:px-0`}
           >
-            Joyful learning, lasting memories. Nurturing young minds with love.
-            A place where little explorers blossom! Every child&apos;s adventure
-            begins here.
+            Nurturing young minds with love. Every child&apos;s
+            adventure begins at TDJ!
           </p>
           <motion.div
             whileHover={{
