@@ -18,11 +18,18 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang={Config.defaultLocale}>
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link
           rel="icon"
-          href="/assets/images/logo.png"
+          href="/icon.png"
           type="image/png"
-          sizes="any"
+          sizes="32x32"
+        />
+        <link
+          rel="apple-touch-icon"
+          href="/apple-icon.png"
+          type="image/png"
+          sizes="180x180"
         />
       </head>
       <body>
