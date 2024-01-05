@@ -9,7 +9,7 @@ import { notification } from "antd";
 import SectionWrapper from "@components/basic/SectionWrapper";
 
 import { styles } from "@styles/sharedStyles";
-import "./Location.css"
+import "./Location.css";
 
 const Location = () => {
   const [api, contextHolder] = notification.useNotification();
@@ -53,7 +53,7 @@ const Location = () => {
             Find us at
           </h4>
           <motion.div
-            className="relative envelope rounded-xl w-[80%] h-fit p-2 border-black border-[1px] shadow-3xl"
+            className="relative envelope rounded-xl w-[80%] max-lg:w-full max-md:w-[80%] max-sm:w-full h-fit p-2 border-black border-[1px] shadow-3xl"
             whileHover={{ scale: 1.2 }}
             onHoverStart={() => {
               setShowCopyButton(true);
@@ -77,12 +77,12 @@ const Location = () => {
             </motion.button>
             <div className="bg-foreground p-5 rounded-xl border-black border-[1px]">
               <p className={styles.withinSectionAddressText}>
-                {Config.personal.address.street} <br/>
-                {Config.personal.address.residential} <br/>
-                {Config.personal.address.postalTown}<br/>
+                {Config.personal.address.street} <br />
+                {Config.personal.address.residential} <br />
+                {Config.personal.address.postalTown}
+                <br />
                 {Config.personal.address.stateCountry}
               </p>
-            
             </div>
           </motion.div>
         </div>

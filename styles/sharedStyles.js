@@ -24,7 +24,7 @@ const styles = {
     "font-inter text-textDefault text-[17px] max-w-3xl leading-[30px]",
 
   withinSectionAddressHeadText:
-    "text-accent font-satoshi font-bold lg:text-[50px] md:text-[40px] sm:text-[40px] xs:text-[30px] text-[20px] drop-shadow-md",
+    "text-accent font-satoshi font-bold lg:text-[50px] md:text-[40px] sm:text-[40px] text-[30px] drop-shadow-md",
   withinSectionAddressText:
     "font-ooohBaby lg:text-[20px] md:text-[16px] text-[20px] font-semibold",
 

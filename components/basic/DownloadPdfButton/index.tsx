@@ -13,12 +13,12 @@ const DownloadPdfButton = () => {
   // Function to trigger file download
   const downloadFile = async () => {
     // Create a link element and trigger a download
-    const link = document.createElement("a");
-    link.href = "/assets/files/TDJ2023EnrolmentForm.pdf";
-    link.download = "TDJ 2023 Enrolment Form.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // const link = document.createElement("a");
+    // link.href = "/assets/files/TDJ2023EnrolmentForm.pdf";
+    // link.download = "TDJ 2023 Enrolment Form.pdf";
+    // document.body.appendChild(link);
+    // link.click();
+    // document.body.removeChild(link);
   };
 
   const showModal = () => {
