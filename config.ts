@@ -5,14 +5,12 @@ import {
   StaticImport,
 } from "next/dist/shared/lib/get-img-props";
 import LowDefLogo from "./public/assets/images/logos/logo.png";
-import HighDefLogo from "./public/assets/images/logos/logo-big.png";
 import TiltCardPic1 from "./public/assets/images/cards/card-sportsDay.jpg";
 import TiltCardPic2 from "./public/assets/images/cards/card-malaysiaDay.jpg";
 import TiltCardPic3 from "./public/assets/images/cards/card-plants.jpg";
 
 const Config: {
   logoLowDef: StaticImageData;
-  logoHighDef: StaticImageData;
   defaultLocale: string;
   locales: { [langs: string]: { icon: string | StaticImport } };
 
@@ -42,7 +40,6 @@ const Config: {
 } = {
   // Default Website Stuff
   logoLowDef: LowDefLogo,
-  logoHighDef: HighDefLogo,
   defaultLocale: "en",
   locales: {
     en: {

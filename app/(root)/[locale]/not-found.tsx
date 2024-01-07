@@ -1,5 +1,7 @@
-import NotFound from "@components/NotFound";
+import dynamic from "next/dynamic";
 import Navigation from "@components/Navigation";
+
+const NotFound = dynamic(() => import("@components/NotFound"));
 
 const NotFoundPage = () => {
   return (

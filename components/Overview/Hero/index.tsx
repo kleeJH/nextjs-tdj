@@ -1,6 +1,8 @@
 "use client";
+
 import Config from "@config";
 
+import dynamic from "next/dynamic";
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -9,59 +11,15 @@ import { useRouter } from "next/navigation";
 import { ArrowDown } from "lucide-react";
 
 import BackgroundGrid from "@components/basic/GridBackground";
-import TiltCard from "@components/basic/TiltCard";
 import ShinyButton from "@components/basic/ShinyButton";
 
 import { styles } from "@styles/sharedStyles";
 import "./Hero.css";
 
+const HeroTiltCards = dynamic(() => import("@components/basic/TiltCard"));
+
 const Hero = () => {
   const router = useRouter();
-
-  const cards = [
-    {
-      icon: Config.hero.picture1,
-      motionProps: {
-        initial: {
-          y: -80,
-          x: 40,
-          opacity: 0,
-        },
-        animate: {
-          y: -70,
-          opacity: 1,
-        },
-      },
-    },
-    {
-      icon: Config.hero.picture2,
-      motionProps: {
-        initial: {
-          y: 60,
-          x: 0,
-          opacity: 0,
-        },
-        animate: {
-          y: 50,
-          opacity: 1,
-        },
-      },
-    },
-    {
-      icon: Config.hero.picture3,
-      motionProps: {
-        initial: {
-          y: -40,
-          x: -30,
-          opacity: 0,
-        },
-        animate: {
-          y: -30,
-          opacity: 1,
-        },
-      },
-    },
-  ];
   return (
     <div className="container relative min-h-[calc(90vh)] max-nav:pt-16 overflow-hidden">
       <span className="relative h-[calc(30vh)]" />
@@ -85,7 +43,7 @@ const Hero = () => {
               className="max-sm:w-32"
             >
               <Image
-                src={Config.logoHighDef}
+                src={Config.logoLowDef}
                 alt="TDJ's Logo"
                 width={170}
                 height={170}
@@ -105,10 +63,6 @@ const Hero = () => {
             adventure begins at TDJ!
           </p>
           <motion.div
-            whileHover={{
-              scale: [1, 1.1, 1],
-              transition: { duration: 1, repeat: 1 },
-            }}
             whileTap={{
               scale: 0.8,
             }}
@@ -127,23 +81,7 @@ const Hero = () => {
           <div className="hidden nav:flex absolute -inset-40 top-1/2 -z-30 -translate-y-1/2 translate-x-[-30px] overflow-hidden rounded-full">
             <BackgroundGrid />
           </div>
-          {cards.map((card, index) => (
-            <motion.div
-              key={index}
-              animate={Object.assign({}, card.motionProps.animate, {
-                transition: {
-                  duration: 0.4,
-                },
-              })}
-              initial={card.motionProps.initial}
-              whileHover={{
-                zIndex: 100,
-                scale: 1.1,
-              }}
-            >
-              <TiltCard index={index} icon={card.icon} />
-            </motion.div>
-          ))}
+          <HeroTiltCards />
         </div>
       </div>
 

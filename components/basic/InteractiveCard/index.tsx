@@ -11,7 +11,6 @@ import {
   type Variants,
 } from "framer-motion";
 import { useIsMobile } from "@utils/useIsMobile";
-import Image from "next/image";
 
 import "./InteractiveCard.css";
 
@@ -104,43 +103,4 @@ const InteractiveCard = ({
   );
 };
 
-interface ContactCardProps {
-  title: string;
-  description: string;
-  icon: string;
-}
-
-const ContactCard = ({ title, description, icon }: ContactCardProps) => {
-  function getRandomInt(min: number, max: number) {
-    return Math.max(min, Math.floor(Math.random() * max));
-  }
-
-  return (
-    <InteractiveCard
-      title={title}
-      titleClassName="blue-pink-text-gradient w-fit !text-3xl"
-      description={description}
-      descriptionClassName="group-hover:text-accent !font-semibold !text-md"
-      width="w-[300px]"
-      height="h-[300px]"
-      className="group drop-shadow-lg"
-    >
-      {Array.from(Array(30).keys()).map((key) => (
-        <Image
-          key={key}
-          src={icon}
-          alt="Icon"
-          style={{
-            left: getRandomInt(20, 250),
-            animationDelay: `${getRandomInt(200, 5000)}ms`,
-          }}
-          className={`opacity-0 absolute bottom-[0px] group-hover:block group-hover:animate-float transition max-sm:animate-float`}
-          width={getRandomInt(20, 45)}
-          height={20}
-        />
-      ))}
-    </InteractiveCard>
-  );
-};
-
-export { InteractiveCard, ContactCard };
+export default InteractiveCard;

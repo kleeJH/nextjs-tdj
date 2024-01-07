@@ -2,12 +2,13 @@
 
 import Config from "@config";
 
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 
-import DesktopNavigation from "./desktop-nav";
-import MobileNavigation from "./mobile-nav";
+const DesktopNavigation = dynamic(() => import("./desktop-nav"));
+const MobileNavigation = dynamic(() => import("./mobile-nav"));
 
 const Navigation = ({
   bgType = "default",

@@ -1,6 +1,7 @@
 "use client";
+import dynamic from "next/dynamic";
 
-import NotFound from "@components/NotFound";
+const NotFound = dynamic(() => import("@components/NotFound"));
 
 export default function ErrorPage() {
   return <NotFound type="error" />;

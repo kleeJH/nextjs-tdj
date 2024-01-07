@@ -1,12 +1,14 @@
-import Config from "@config";
+import dynamic from "next/dynamic";
 
 import SectionWrapper from "@components/basic/SectionWrapper";
-import CarouselWithArrows from "@components/basic/CarouselWithArrows";
 
 import { styles } from "@styles/sharedStyles";
 
-const Gallery = () => {
+const FacebookCarousel = dynamic(
+  () => import("@components/heavy/FacebookCarousel")
+);
 
+const Gallery = () => {
   return (
     <>
       <div className="mb-14">
@@ -14,22 +16,7 @@ const Gallery = () => {
         <h2 className={styles.sectionHeadText}>Gallery.</h2>
       </div>
 
-      <CarouselWithArrows>
-        {Config.gallery.map((post, index) => (
-          <div key={index}>
-            <iframe
-              src={`https://www.facebook.com/plugins/post.php?href=${encodeURIComponent(
-                post.link
-              )}&show_text=false&width=350`}
-              width={350}
-              height={post.height}
-              className="border-0 overflow-hidden mx-auto"
-              allowFullScreen={true}
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-            />
-          </div>
-        ))}
-      </CarouselWithArrows>
+      <FacebookCarousel />
     </>
   );
 };

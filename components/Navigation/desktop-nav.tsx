@@ -1,4 +1,4 @@
-import LocaleSwitch from "./locale-button";
+// import LocaleSwitch from "./locale-button";
 import ThemeSwitch from "./theme-button";
 
 const  DesktopNavigation = ({
