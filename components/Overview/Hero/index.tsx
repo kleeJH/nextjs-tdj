@@ -123,7 +123,7 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        <div className="relative hidden sm:flex sm:flex-row justify-center items-center overflow-visible h-[500px] nav:h-[600px] w-full">
+        <div className="relative flex sm:flex-row justify-center items-center overflow-visible h-[400px] sm:h-[500px] nav:h-[600px] w-full">
           <div className="hidden nav:flex absolute -inset-40 top-1/2 -z-30 -translate-y-1/2 translate-x-[-30px] overflow-hidden rounded-full">
             <BackgroundGrid />
           </div>

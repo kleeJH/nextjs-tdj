@@ -62,6 +62,7 @@ const config: Config = {
           "0 20px 25px -5px var(--drop-shadow-color), 0 8px 10px -6px var(--drop-shadow-color)",
       },
       screens: {
+        xs: "450px",
         nav: "1080px",
         "3xl": "1921px",
       },

@@ -5,6 +5,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 
+import Config from "@config";
+
 // Ref: https://github.com/typehero/typehero/blob/main/apps/web/src/app/not-found.tsx
 export default function NotFound({
   type = "notfound",
@@ -19,7 +21,7 @@ export default function NotFound({
         <Image
           className="animate-logofly absolute left-0 -z-10 mx-auto opacity-80"
           alt="TDJ's Logo"
-          src="/assets/images/logo.png"
+          src={Config.logoLowDef}
           height="70"
           width="60"
         />

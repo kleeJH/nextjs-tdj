@@ -3,12 +3,10 @@ import Config from "@config";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
+import { baseMetadata } from "../metadata";
 import { StyleProviders } from "./[locale]/providers";
 
-export const metadata: Metadata = {
-  title: "Tadika Desa Jaya",
-  description: "Tadika Desa Jaya's Website",
-};
+export const metadata: Metadata = { ...baseMetadata };
 
 export default function RootLayout({
   children,
@@ -21,7 +19,13 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link
           rel="icon"
-          href="/icon.png"
+          href="/assets/images/logos/favicon-16x16.png"
+          type="image/png"
+          sizes="16x16"
+        />
+        <link
+          rel="icon"
+          href="/assets/images/logos/favicon-32x32.png"
           type="image/png"
           sizes="32x32"
         />
