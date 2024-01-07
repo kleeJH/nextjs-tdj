@@ -15,7 +15,7 @@ const TiltCard = ({
   className?: string;
 }) => {
   return (
-    <Tilt className={`2xl:w-[240px] xl:w-[220px] sm:w-[200px] xs:w-[150px] w-[100px] ${className}`}>
+    <Tilt className={`xl:w-[210px] sm:w-[200px] xs:w-[150px] w-[100px] ${className}`}>
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.7)}
         className="w-full card-border-gradient p-1 rounded-xl shadow-xm"
