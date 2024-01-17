@@ -6,7 +6,7 @@ export const WEBSITE_URL =
     : "https://tadikadesajaya.edu.my";
 
 export const tagline =
-  "Tadika Desa Jaya is an elementary school that is situated in Kepong, Malaysia. We nurture young minds with love. Every child's adventure begins at TDJ!";
+  "Tadika Desa Jaya is a kindergarten that is situated in Kepong, Malaysia. We nurture young minds with love. Every child's adventure begins at TDJ!";
 
 export const baseMetadata: Metadata = {
   metadataBase: new URL(WEBSITE_URL),
@@ -14,11 +14,35 @@ export const baseMetadata: Metadata = {
     default: "Tadika Desa Jaya",
     template: "%s",
   },
+  description: tagline,
+  keywords: [
+    "elementary",
+    "elementary school",
+    "kindergarten",
+    "kindergarten school",
+    "tadika",
+    "tadika kepong",
+    "kepong",
+    "kepong tadika",
+    "tadika desa",
+    "desa jaya",
+    "tadika desa jaya",
+    "tadika desa jaya kepong",
+    "tdj",
+    "tdj kepong",
+    "malaysia",
+    "kepong malaysia",
+  ],
+  authors: [
+    {
+      name: "Jun Hong",
+      url: "https://github.com/kleeJH",
+    },
+  ],
   robots: {
     index: true,
     follow: true,
   },
-  description: tagline,
   openGraph: {
     title: "Tadika Desa Jaya",
     description: tagline,

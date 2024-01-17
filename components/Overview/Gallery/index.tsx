@@ -11,7 +11,7 @@ const FacebookCarousel = dynamic(
 const Gallery = () => {
   return (
     <>
-      <div className="mb-14">
+      <div className="mb-10">
         <p className={styles.sectionSubText}>CAPTURE MOMENTS</p>
         <h2 className={styles.sectionHeadText}>Gallery.</h2>
       </div>
