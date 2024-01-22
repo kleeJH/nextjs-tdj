@@ -69,7 +69,6 @@ const Footer = ({ hidden = false }: { hidden?: boolean }) => {
 
           {/* Horizontal Divider */}
           <hr className="my-6 border-textDefault" />
-          {/* <Divider /> */}
 
           {/* Footer Below */}
           <div className="flex flex-col gap-4">

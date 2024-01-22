@@ -16,7 +16,6 @@ export const baseMetadata: Metadata = {
   },
   description: tagline,
   keywords: [
-    "elementary",
     "elementary school",
     "kindergarten",
     "kindergarten kepong",
