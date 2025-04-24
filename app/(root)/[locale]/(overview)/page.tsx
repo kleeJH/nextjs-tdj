@@ -5,8 +5,8 @@ import {
   Hero,
   Location,
   Programme,
+  // Gallery
 } from "@components/Overview";
-import Gallery from "@components/Overview/Gallery";
 
 const OverviewPage = () => {
   return (
@@ -17,7 +17,7 @@ const OverviewPage = () => {
       <Admission />
       <Location />
       <Contact />
-      <Gallery />
+      {/* <Gallery /> */}
     </div>
   );
 };
