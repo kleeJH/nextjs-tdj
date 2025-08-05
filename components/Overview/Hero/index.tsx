@@ -29,7 +29,12 @@ const Hero = () => {
 
       <div className="relative grid justify-center items-center grid-cols-1 nav:grid-cols-2 gap-10 nav:gap-24 3xl:pt-[calc(10vh)]">
         <div className="flex flex-col gap-5 justify-center items-center nav:items-start">
-          <h1 className={`${styles.heroWelcomeText}`}>Welcome!</h1>
+          <div className="flex flex-col">
+            <p className="font-inter text-sm text-gray-500">
+              Reg No: {Config.businessRegNumber}
+            </p>
+            <h1 className={`${styles.heroWelcomeText}`}>Welcome!</h1>
+          </div>
           <div className="flex w-fit flex-row justify-center items-center gap-5 nav:pr-5">
             <motion.span
               whileInView={{

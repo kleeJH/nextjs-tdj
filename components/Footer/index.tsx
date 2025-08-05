@@ -15,7 +15,7 @@ const Footer = ({ hidden = false }: { hidden?: boolean }) => {
     >
       <div className="container">
         <div className="flex flex-col">
-          <div className="flex flex-row justify-between items-center gap-8 max-sm:flex-col max-sm:items-start max-sm:justfiy-start">
+          <div className="flex flex-row justify-between items-center gap-8 max-sm:flex-col max-sm:items-start max-sm:justify-start">
             <div className="flex flex-row gap-5">
               <div className="flex items-center select-none">
                 <Image
@@ -118,7 +118,7 @@ const Footer = ({ hidden = false }: { hidden?: boolean }) => {
               </div>
             </div>
             <div className="flex flex-row justify-between gap-2 max-sm:flex-col max-sm:items-start">
-              <div className="flex flex-row gap-3 justify-between max-sm:flex-col max-sm:items-start max-sm:gap-0">
+              <div className="flex flex-row gap-3 justify-between items-center max-sm:flex-col max-sm:items-start max-sm:gap-0">
                 <Link href={"/tos"} className="footer-link-text text-center">
                   <p>{t("Footer.Bottom.termsOfService")}</p>
                 </Link>
@@ -140,7 +140,8 @@ const Footer = ({ hidden = false }: { hidden?: boolean }) => {
               </div>
               <p className="text-right font-inter text-gray-500 text-sm max-sm:text-left">
                 © {new Date().getFullYear()} Tadika Desa Jaya.{" "}
-                {t("Footer.Bottom.allRightsReserved")}.
+                {t("Footer.Bottom.allRightsReserved")}.<br />
+                Business Reg No: {Config.businessRegNumber}
               </p>
             </div>
           </div>

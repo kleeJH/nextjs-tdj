@@ -14,6 +14,8 @@ const Config: {
   defaultLocale: string;
   locales: { [langs: string]: { icon: string | StaticImport } };
 
+  businessRegNumber: string;
+
   personal: {
     address: {
       street: string;
@@ -59,6 +61,9 @@ const Config: {
       stateCountry: "Malaysia",
     },
   },
+
+  // Business Registration Number
+  businessRegNumber: "197703016206",
 
   // Socials
   socials: {
