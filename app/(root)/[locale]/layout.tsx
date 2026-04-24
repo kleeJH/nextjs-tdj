@@ -4,22 +4,24 @@ import "@styles/globals.css";
 import React from "react";
 
 import { NextIntlClientProvider, useMessages } from "next-intl";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
+import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
-const LocaleLayout = ({
+const LocaleLayout = async ({
   children,
-  params: { locale },
+  params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) => {
-  // Validate that the incoming `locale` parameter is valid
+  const { locale } = await params;
   if (!Object.keys(Config.locales).includes(locale as any)) notFound();
 
-  const messages = useMessages();
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
+
+  const messages = await getMessages();
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>

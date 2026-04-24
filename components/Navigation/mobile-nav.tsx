@@ -47,7 +47,7 @@ const MobileNavigation = ({
         placement="right"
         onClose={onClose}
         open={toggleMobileDrawer}
-        width={250}
+        size={250}
         extra={
           <div className="flex justify-end items-center gap-3 md:gap-5">
             {/* <LocaleSwitch /> */}
