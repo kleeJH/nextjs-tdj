@@ -19,7 +19,7 @@
     "language-icons": "^0.3.0",
     "lucide-react": "^0.294.0",
     "next": "^16.2.6",
-    "next-intl": "^4.9.1",
+    "next-intl": "^4.9.2",
     "next-themes": "^0.4.6",
     "nextjs-tdj": "file:",
     "react": "^18",
@@ -35,7 +35,7 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
-    "postcss": "^8",
+    "postcss": "^8.5.10",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }
